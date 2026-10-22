@@ -2,7 +2,7 @@
 
 ## Current publishing status
 
-This repository currently publishes OTA binaries under `Software/` but **does not yet publish a source sketch or verified factory-flash package**. Do not use the OTA binary as though it were a complete USB-flash image.
+This repository currently publishes OTA binaries under `Software/` but **does not yet publish the Arduino source matching firmware v2.15 or a verified factory-flash package**. Do not use the OTA binary as though it were a complete USB-flash image.
 
 ## Existing compatible installation
 
