@@ -6,7 +6,7 @@
 ![Firmware](https://img.shields.io/badge/OTA%20firmware-v2.15-blue)
 ![Platform](https://img.shields.io/badge/platform-ESP32-green)
 
-> **Development project:** The published repository currently contains compiled OTA firmware, but not the Arduino source sketch. Hardware pins, supported ESP32 board variants, connection procedures and specific firmware features must be checked against the actual firmware before use.
+> **Development project:** The published repository currently contains compiled OTA firmware, and the original historical Arduino v2.1 source, but not the source for current v2.15. Hardware pins, supported ESP32 board variants, connection procedures and specific firmware features must be checked against the actual firmware before use.
 
 ## Overview
 
@@ -57,7 +57,7 @@ The exact update UI and steps depend on the installed firmware. This documentati
 
 ### New build / first-time installation
 
-A full USB installation guide cannot be verified yet because the source code, board selection, GPIO assignment and initial flash package are not present in the repository. **Please do not wire or flash hardware based on guessed values.** See [Installation status](docs/INSTALLATION.md).
+A full USB installation guide for the current firmware cannot be verified yet because its matching source, confirmed board settings and initial flash package are not present in the repository. **Please do not wire or flash hardware based on guessed values.** See [Installation status](docs/INSTALLATION.md).
 
 ## Firmware updates
 
@@ -65,6 +65,8 @@ A full USB installation guide cannot be verified yet because the source code, bo
 
 ## Documentation
 
+- [Archived Arduino v2.1 sketch and important warnings](Arduino/README.md)
+- [Future K2 printable 3D parts](K2/README.md)
 - [Installation and first-run status](docs/INSTALLATION.md)
 - [Hardware, wiring and power](docs/HARDWARE.md)
 - [Release and OTA publishing checklist](docs/RELEASING.md)
@@ -78,7 +80,8 @@ Photos of the LED bars, web interface and a **verified** wiring diagram can be a
 
 ## Roadmap
 
-- [ ] Publish reviewed Arduino source code and dependency versions.
+- [x] Restore historical Arduino v2.1 source from Git history.
+- [ ] Publish and verify matching source for current v2.15 firmware and dependency versions.
 - [ ] Document the exact board, GPIO assignments and number/type of LEDs.
 - [ ] Provide a tested first-time USB flashing procedure.
 - [ ] Confirm network onboarding, printer connectivity and web UI behaviours per build.
@@ -91,7 +94,7 @@ Feedback and issue reports are welcome. Please see [CONTRIBUTING.md](CONTRIBUTIN
 
 ## License
 
-This repository currently contains an [MIT license](LICENSE), which **allows commercial use** subject to its conditions. A private-use-only or non-commercial restriction would require a different licensing decision; merely describing the project as DIY does not change its legal permissions.
+New project materials are offered for **private non-commercial home use only**, with all other uses requiring prior written permission, under the [Personal Home Use License](LICENSE). See [licensing notes](docs/LICENSING.md), including the important exception that earlier MIT-licensed copies retain their original permissions.
 
 ## Disclaimer
 
