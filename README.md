@@ -1,101 +1,84 @@
 # Creality K2 Status Light
 
-**A DIY ESP32-powered LED status and print-progress light for Creality K2 printers.**
+**DIY ESP32-C3 LED print-progress and status indicator for Creality K2 printers.**
 
 ![Project status](https://img.shields.io/badge/status-development-orange)
-![Firmware](https://img.shields.io/badge/OTA%20firmware-v2.15-blue)
-![Platform](https://img.shields.io/badge/platform-ESP32-green)
+![Current OTA](https://img.shields.io/badge/current%20OTA-v2.15-blue)
+![Archived build](https://img.shields.io/badge/archived-v2.16-informational)
+![Platform](https://img.shields.io/badge/platform-ESP32--C3-green)
 
-> **Development project:** The published repository currently contains compiled OTA firmware, and the original historical Arduino v2.1 source, but not the source for current v2.15. Hardware pins, supported ESP32 board variants, connection procedures and specific firmware features must be checked against the actual firmware before use.
+> **Current published update: v2.15.** Build **v2.16** has been archived with its source code but is **not** advertised for automatic installation. All old versions remain available for comparison and recovery where compatible.
 
-## Overview
+## About
 
-Creality K2 Status Light is a community-built LED indicator designed to show print progress at a glance. The project is based on an ESP32 controller, addressable LEDs, and a browser-based configuration interface.
+K2 Status Light uses an ESP32-C3 board, addressable LEDs, and a local browser interface to visualise Creality K2 printing progress. Its firmware communicates with the printer through the local network, offers status lighting and effects, and provides Wi-Fi and device configuration.
 
-**Project goals**
-- Display printer progress on LED light bars.
-- Offer LED effects and tests through a local web interface.
-- Make setup and Wi-Fi configuration convenient.
-- Provide English and Polish interface options.
-- Support versioned firmware updates.
+Features documented in the historical firmware include:
+- Progress display on 12 or 24 addressable LEDs (in pairs).
+- Configurable colours, brightness, flashing patterns, and effects.
+- Browser-based configuration, preview, and LED test tools.
+- Wi-Fi onboarding via `K2-LED-Setup` when needed.
+- English, Polish, Spanish, and German UI in developed versions.
+- Manual OTA updates and a GitHub version-check workflow.
 
-The functions listed above describe the project's intended capabilities; individual firmware builds may differ.
+Specific functions depend on the installed firmware version. See the [change history](CHANGELOG.md).
 
-## Downloads
+## Firmware and source
 
-The newest firmware package currently referenced by the update manifest is **v2.15**:
-
-| File | Purpose |
+| Item | Download |
 | --- | --- |
-| [v2.15 OTA firmware](Software/K2_Status_Light_v2_15_OTA.bin) | Current package linked by update manifest |
-| [v2.14 OTA firmware](Software/K2_Status_Light_v2_14_OTA.bin) | Older build |
-| [v2.12 OTA firmware](Software/K2_Status_Light_v2_12_OTA.bin) | Older build |
-| [Update manifest](Software/update.json) | Machine-readable version, filename, size and SHA-256 |
+| **Current OTA v2.15** | [Download .bin](Software/K2_Status_Light_v2_15_OTA.bin) |
+| **Source code v2.15** | [View .ino](Arduino/archive/K2_Status_Light_v2_15.ino) |
+| **Archived build v2.16** | [OTA .bin](Software/archive/K2_Status_Light_v2_16_OTA.bin) · [source .ino](Arduino/archive/K2_Status_Light_v2_16.ino) |
+| **All historical versions** | [Firmware archive](Software/archive/README.md) · [Source archive](Arduino/README.md) |
+| **Why each version was created** | [Detailed changelog](CHANGELOG.md) |
+| **OTA update manifest** | [Software/update.json](Software/update.json) |
 
-**Important:** These files are named `_OTA.bin` and are intended for an *already installed and compatible* OTA-capable firmware. **Do not assume they are suitable for flashing a blank ESP32 over USB.** A verified initial-installation firmware and exact flashing instructions have not yet been published.
+The archive contains available original Arduino sources for v2.0, v2.1 and v2.3–v2.16, and OTA binaries from v2.3 through v2.16. **v2.2 remains unavailable** as its earlier ZIP could not be retrieved intact.
 
-## Hardware
+## Hardware used by the archived firmware
 
-- A supported ESP32 development board (exact model to be confirmed).
-- Compatible addressable LED strip(s).
-- A properly rated power supply for the LEDs and controller.
-- Suitable cabling, connectors, and protection as appropriate.
-- Creality K2 printer accessible on the required local network.
+The v2.15 source and the packaged installation notes target:
+- **ESP32-C3 SuperMini / ESP32C3 Dev Module**, 4 MB flash.
+- **SK6812 RGBW** addressable LEDs, with data on **GPIO4** in the reference configuration.
+- **24 LEDs maximum** in the original code, with 12/24 display layouts.
+- Onboard blue status LED on **GPIO8** (active LOW on the referenced board).
+- Printer network interface through **Moonraker** (default port 7125 in earlier builds).
 
-See [Hardware and wiring](docs/HARDWARE.md) for electrical safety notes and the information still needed to publish an accurate wiring diagram.
+**These are firmware settings, not a verified physical wiring diagram for every board.** Verify voltage, current, level shifting, grounds, and the GPIOs on your specific ESP32 and LED strip. Never connect printer 24 V directly to the ESP32 or 5 V LEDs. See [hardware notes](docs/HARDWARE.md).
 
-## Setup
+## Installation
 
-### Already running an earlier compatible version
+**Existing installation:** use the device's built-in update page with the correct compatible `_OTA.bin` file. Do not disconnect power during the update. If the firmware uses the GitHub manifest, it currently advertises **2.15**.
 
-1. Confirm that your hardware is running an existing build of **this** project and has an OTA update feature.
-2. Open its web interface and follow the update workflow provided by that firmware.
-3. If it uses `Software/update.json`, the current manifest selects version **2.15**.
-4. Do not disconnect power during an update. Keep a tested recovery method available.
+**New ESP32 device:** see the [first-time installation guide](docs/INSTALLATION.md) for the historically packaged v2.3 USB image and the Arduino sketch option. USB flashing can erase saved settings and requires the correct chip/flash/partition settings. Firmware has not been retested on every possible board.
 
-The exact update UI and steps depend on the installed firmware. This documentation does **not** assert compatibility with unrelated ESP32 firmware.
+**Security:** several archived versions have no web-panel authentication, and the setup AP has a published default password. Use the device only on a trusted LAN; never expose its admin/OTA interface directly to the internet.
 
-### New build / first-time installation
+## Repository folders
 
-A full USB installation guide for the current firmware cannot be verified yet because its matching source, confirmed board settings and initial flash package are not present in the repository. **Please do not wire or flash hardware based on guessed values.** See [Installation status](docs/INSTALLATION.md).
-
-## Firmware updates
-
-`Software/update.json` contains the advertised version and firmware filename plus expected file size and SHA-256 digest. Firmware publishers should keep all four values in sync with the uploaded binary. See [Release and OTA checklist](docs/RELEASING.md).
+- [`Arduino/archive/`](Arduino/archive/) — original source sketches by version.
+- [`Arduino/legacy/`](Arduino/legacy/) — recovered v2.1 sketch from Git history.
+- [`Software/`](Software/) — current update manifest and selected original OTA files.
+- [`Software/archive/`](Software/archive/) — additional earlier OTA and USB images.
+- [`K2/`](K2/) — planned 3D printable cases, LED bar mounts, cable guides, and diffusers.
+- [`docs/`](docs/) — installation, hardware notes, release checklist and licensing.
 
 ## Documentation
 
-- [Archived Arduino v2.1 sketch and important warnings](Arduino/README.md)
-- [Future K2 printable 3D parts](K2/README.md)
-- [Installation and first-run status](docs/INSTALLATION.md)
-- [Hardware, wiring and power](docs/HARDWARE.md)
-- [Release and OTA publishing checklist](docs/RELEASING.md)
-- [Changes and firmware history](CHANGELOG.md)
-- [How to contribute](CONTRIBUTING.md)
-- [Security and responsible reporting](SECURITY.md)
-
-## Screenshots and diagrams
-
-Photos of the LED bars, web interface and a **verified** wiring diagram can be added under `docs/images/` when available.
-
-## Roadmap
-
-- [x] Restore historical Arduino v2.1 source from Git history.
-- [ ] Publish and verify matching source for current v2.15 firmware and dependency versions.
-- [ ] Document the exact board, GPIO assignments and number/type of LEDs.
-- [ ] Provide a tested first-time USB flashing procedure.
-- [ ] Confirm network onboarding, printer connectivity and web UI behaviours per build.
-- [ ] Add photos, screenshots and wiring diagrams.
-- [ ] Publish GitHub Releases with notes and checksums.
-
-## Contributing
-
-Feedback and issue reports are welcome. Please see [CONTRIBUTING.md](CONTRIBUTING.md). Only repository maintainers and explicitly invited collaborators can directly push to this repository.
+- [Version-by-version changelog](CHANGELOG.md)
+- [Polish version history](docs/CHANGELOG_PL.md)
+- [Installation and first run](docs/INSTALLATION.md)
+- [Hardware and wiring](docs/HARDWARE.md)
+- [OTA publishing checklist](docs/RELEASING.md)
+- [3D design roadmap](K2/README.md)
+- [License and prior MIT versions](docs/LICENSING.md)
+- [Contributions](CONTRIBUTING.md) · [Security](SECURITY.md)
 
 ## License
 
-New project materials are offered for **private non-commercial home use only**, with all other uses requiring prior written permission, under the [Personal Home Use License](LICENSE). See [licensing notes](docs/LICENSING.md), including the important exception that earlier MIT-licensed copies retain their original permissions.
+**Private, non-commercial home use only** under the current [Personal Home Use License](LICENSE); other uses require prior written permission. This is **source-available**, not OSI open source. Material previously distributed under MIT retains existing MIT permissions. See [licensing details](docs/LICENSING.md).
 
 ## Disclaimer
 
-An independent community project, not affiliated with or endorsed by Creality. Electrical assembly, third-party firmware flashing, and printer integration are performed at your own risk. Verify component ratings and connections before applying power.
+Independent community project; not affiliated with or endorsed by Creality. Firmware archives and their notes are preserved for reference; archived binaries and first-flash images should only be used on verified compatible hardware and are provided without warranty.
