@@ -1,12 +1,12 @@
 # Release and OTA checklist
 
-The existing OTA manifest is at [`Software/update.json`](../Software/update.json). **Keep its format and path unchanged unless the updater firmware is updated too.**
+The active OTA manifest is at [`Software/update.json`](../Software/update.json) and currently points to **v2.15**. Archived **v2.16** is *not yet promoted*. **Keep the manifest format and path unchanged unless the updater firmware is updated too.**
 
 ## Preparing a new version
 
 1. Build and test firmware on the supported ESP32 hardware.
 2. Export the OTA-compatible `.bin` using the **same compatible partition and firmware layout** as existing deployed devices.
-3. Name it consistently, e.g. `K2_Status_Light_v2_16_OTA.bin`.
+3. Name it consistently, e.g. `K2_Status_Light_v2_17_OTA.bin`.
 4. Upload the binary to `Software/` *before* updating the manifest.
 5. Compute the actual binary byte size and SHA-256 checksum.
 6. Update `Software/update.json` with the new version, exact filename, byte size and lowercase SHA-256.
@@ -24,4 +24,4 @@ The existing OTA manifest is at [`Software/update.json`](../Software/update.json
 }
 ```
 
-This is the manifest **as currently published**, not a proof that the binary was validated. **Do not change the manifest to a version that has not been uploaded and tested.** Keep older known-good firmware files available for recovery where appropriate.
+This is the manifest **as currently published**, not a proof that the binary was validated. Storing a higher version in `Software/archive/` does not activate it. Before publishing a new version to `Software/`, review the associated source code and test OTA on your hardware. **Do not change the manifest to a version that has not been uploaded and tested.** Keep older known-good firmware files available for recovery where appropriate.
