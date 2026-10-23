@@ -4,7 +4,7 @@
 
 - Set the Wi-Fi DHCP hostname before starting the radio. Routers can now show `LayerGlow` in their device lists instead of the ESP32-generated name.
 - Preserve the existing `layerglow.local` mDNS address and `LayerGlow-Setup` recovery AP. A custom .local device name is sent as the router name on the next boot.
-- GitHub Actions build and physical router verification are pending.
+- GitHub Actions build passed; physical router verification remains pending.
 
 ## v2.32 — test candidate (23 October 2026)
 

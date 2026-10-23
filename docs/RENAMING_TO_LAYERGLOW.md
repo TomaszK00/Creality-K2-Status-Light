@@ -1,8 +1,8 @@
 # LayerGlow naming and OTA migration
 
-The public project and interface name is **LayerGlow**. The repository is [TomaszK00/LayerGlow](https://github.com/TomaszK00/LayerGlow). The current test candidate is **v2.32**; `Software/update.json` points to one image, `LayerGlow_v2_32_OTA.bin`. Original older K2 binaries remain in the archive, while duplicate K2-named aliases for v2.27–v2.31 have been removed.
+The public project and interface name is **LayerGlow**. The repository is [TomaszK00/LayerGlow](https://github.com/TomaszK00/LayerGlow). The current test candidate is **v2.33**; `Software/update.json` points to one image, `LayerGlow_v2_33_OTA.bin`. Original older K2 binaries remain in the archive, while duplicate K2-named aliases for v2.27–v2.31 have been removed.
 
-The previous repository name was `TomaszK00/Creality-K2-Status-Light`. Firmware already installed on a device may contain that old URL or expect a `K2_Status_Light_..._OTA.bin` filename. In that case, use the web panel to upload the v2.32 OTA image once; subsequent updates use the LayerGlow URL and filename. Whether a particular old installation follows GitHub redirects must be checked on the device.
+The previous repository name was `TomaszK00/Creality-K2-Status-Light`. Firmware already installed on a device may contain that old URL or expect a `K2_Status_Light_..._OTA.bin` filename. In that case, use the web panel to upload the v2.33 OTA image once; subsequent updates use the LayerGlow URL and filename. Whether a particular old installation follows GitHub redirects must be checked on the device.
 
 The historical v2.15 firmware contained these hard-coded endpoints:
 

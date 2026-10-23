@@ -4,7 +4,7 @@
 
 - Ustawiono nazwę klienta DHCP przed uruchomieniem Wi-Fi. Router może teraz pokazywać `LayerGlow` zamiast automatycznej nazwy ESP32.
 - Adres `layerglow.local` i sieć ratunkowa `LayerGlow-Setup` pozostają takie same. Własna nazwa urządzenia pojawi się w routerze po ponownym uruchomieniu.
-- Kompilacja GitHub Actions i potwierdzenie na fizycznym routerze pozostają do wykonania.
+- Kompilacja GitHub Actions przeszła; potwierdzenie na fizycznym routerze pozostaje do wykonania.
 
 ## v2.32 — wersja testowa (23 października 2026)
 
