@@ -1,5 +1,12 @@
 # Firmware changelog
 
+## v2.30 — test candidate (23 October 2026)
+
+- Put mobile navigation text and language flag in one row while preserving tappable controls.
+- Show a compact test progress, lit LED count and printer state line; hide the manual progress slider and large percentage on mobile.
+- Keep Brightness and Pulse side by side even when expanded; display the selected effect beside Effect.
+- DOM interaction checks and GitHub Actions build passed; device testing is still pending.
+
 ## v2.29 — test candidate (23 October 2026)
 
 - Make mobile navigation buttons, card spacing, typography and form controls consistent across the panel.
@@ -24,7 +31,7 @@
 
 Release descriptions are based on the README files included with the original firmware packages and on preserved repository history. They document **why each build was prepared**, not a claim that every feature was independently tested on physical hardware.
 
-**Published automatic OTA target:** v2.29 test candidate via [`Software/update.json`](Software/update.json). v2.16 is archived as a newer, not-yet-promoted build.
+**Published automatic OTA target:** v2.30 test candidate via [`Software/update.json`](Software/update.json). v2.16 is archived as a newer, not-yet-promoted build.
 
 | Version | Why it was created / main changes | Files |
 | --- | --- | --- |
