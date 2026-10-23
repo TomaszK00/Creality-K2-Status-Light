@@ -1,6 +1,8 @@
 # Contributing
 
-Thanks for helping improve Creality K2 Status Light!
+Thanks for helping improve **LayerGlow**!
+
+The public repository is [TomaszK00/LayerGlow](https://github.com/TomaszK00/LayerGlow). At present, Creality K2 is the documented printer integration; other printers require separate verification.
 
 ## Report a bug or request a feature
 
