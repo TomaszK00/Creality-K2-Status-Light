@@ -3,11 +3,11 @@
 **ESP32-C3-powered LED status and progress indicator for 3D printers. Creality K2 is the currently documented integration; support for other models is planned.**
 
 ![Project status](https://img.shields.io/badge/status-development-orange)
-![Current OTA](https://img.shields.io/badge/current%20OTA-v2.15-blue)
+![Current OTA](https://img.shields.io/badge/current%20OTA-v2.27-orange)
 ![Archived build](https://img.shields.io/badge/archived-v2.16-informational)
 ![Platform](https://img.shields.io/badge/platform-ESP32--C3-green)
 
-> **Current published update: v2.15.** Build **v2.16** has been archived with its source code but is **not** advertised for automatic installation. All old versions remain available for comparison and recovery where compatible.
+> **OTA test candidate: v2.27.** This release is compiled by GitHub Actions and has not yet been tested on a physical ESP32-C3 or printer. The previous published update was v2.15; v2.16 remains archived.
 
 ## About
 
@@ -17,7 +17,7 @@ Features documented in the historical firmware include:
 - Progress display on 12 or 24 addressable LEDs (in pairs).
 - Configurable colours, brightness, flashing patterns, and effects.
 - Browser-based configuration, preview, and LED test tools.
-- Wi-Fi onboarding via `K2-LED-Setup` when needed.
+- Wi-Fi onboarding via `LayerGlow-Setup` in v2.27 (`K2-LED-Setup` on older firmware).
 - English, Polish, Spanish, and German UI in developed versions.
 - Manual OTA updates and a GitHub version-check workflow.
 
@@ -25,13 +25,13 @@ Specific functions depend on the installed firmware version. See the [change his
 
 ## Project name and compatibility
 
-**LayerGlow** is the new project identity. The GitHub repository URL and historical firmware filenames currently retain the original `Creality-K2-Status-Light` naming to protect the existing OTA update path. **Only the Creality K2/Moonraker integration is documented for existing firmware; other brands and printers are not yet confirmed supported.** See [rename and OTA migration plan](docs/RENAMING_TO_LAYERGLOW.md).
+**LayerGlow** is the project identity. The repository URL is `TomaszK00/LayerGlow`. v2.27 includes a legacy filename alias because older updater versions accept only filenames beginning with `K2_Status_Light`. **New printer integrations require testing on each printer model.** See [rename and OTA migration plan](docs/RENAMING_TO_LAYERGLOW.md).
 
 ## Firmware and source
 
 | Item | Download |
 | --- | --- |
-| **Current OTA v2.15** | [Download .bin](Software/K2_Status_Light_v2_15_OTA.bin) |
+| **OTA test candidate v2.27** | [LayerGlow .bin](Software/LayerGlow_v2_27_OTA.bin) · [legacy updater alias](Software/K2_Status_Light_v2_27_OTA.bin) |\n| **Previous OTA v2.15** | [Download .bin](Software/K2_Status_Light_v2_15_OTA.bin) |\n| **Source v2.27** | [Arduino sketch](Arduino/LayerGlow_v2_27/LayerGlow_v2_27.ino) · [PlatformIO project](PlatformIO/) |
 | **Source code v2.15** | [View .ino](Arduino/archive/K2_Status_Light_v2_15.ino) |
 | **Archived build v2.16** | [OTA .bin](Software/archive/K2_Status_Light_v2_16_OTA.bin) · [source .ino](Arduino/archive/K2_Status_Light_v2_16.ino) |
 | **All historical versions** | [Firmware archive](Software/archive/README.md) · [Source archive](Arduino/README.md) |
@@ -53,7 +53,7 @@ The v2.15 source and the packaged installation notes target:
 
 ## Installation
 
-**Existing installation:** use the device's built-in update page with the correct compatible `_OTA.bin` file. Do not disconnect power during the update. If the firmware uses the GitHub manifest, it currently advertises **2.15**.
+**Existing installation:** use the device's built-in update page with the correct compatible `_OTA.bin` file. Do not disconnect power during the update. The GitHub manifest advertises **2.27** only after the new OTA binary has been compiled, checked for size and committed. This is a test candidate. Devices running older firmware may still use the former repository URL; if GitHub update detection fails there, upload the v2.27 OTA BIN manually once, then use the new URL for later versions.
 
 **New ESP32 device:** see the [first-time installation guide](docs/INSTALLATION.md) for the historically packaged v2.3 USB image and the Arduino sketch option. USB flashing can erase saved settings and requires the correct chip/flash/partition settings. Firmware has not been retested on every possible board.
 

@@ -1,5 +1,13 @@
 # Firmware changelog
 
+## v2.27 — test candidate (23 October 2026)
+
+- Split Network and Printer into separate panels; Wi-Fi Save & Connect uses one button.
+- Add live printer readout, multiple discovery results, disconnect, rescan, and local Moonraker scanning.
+- Show 0–100% printer discovery progress and mobile language flags.
+- Rename panel and OTA links to LayerGlow; keep a legacy filename alias for older updater compatibility.
+- Compiled with GitHub Actions; requires testing on the physical ESP32-C3 and printer.
+
 Release descriptions are based on the README files included with the original firmware packages and on preserved repository history. They document **why each build was prepared**, not a claim that every feature was independently tested on physical hardware.
 
 **Published automatic OTA target:** v2.15 via [`Software/update.json`](Software/update.json). v2.16 is archived as a newer, not-yet-promoted build.

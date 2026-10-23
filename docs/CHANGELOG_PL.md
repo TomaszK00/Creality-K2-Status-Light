@@ -1,4 +1,12 @@
-# Historia zmian — K2 Status Light
+# Historia zmian — LayerGlow
+
+## v2.27 — wersja testowa (23 października 2026)
+
+- Rozdzielono okna Sieć i Drukarka. Jeden przycisk zapisuje ustawienia Wi-Fi i rozpoczyna połączenie.
+- Dodano bieżący odczyt stanu drukarki, postępu i nazwy pliku, rozłączanie oraz wybór jednej z wielu wykrytych drukarek.
+- Wyszukiwanie sprawdza także porty Moonraker 7125 i 80 w lokalnej podsieci oraz wyświetla procent od 0 do 100.
+- W mobilnym wyborze języka przywrócono flagi; panel nosi nazwę LayerGlow.
+- Kompilacja GitHub Actions zakończona pomyślnie; OTA i wykrywanie wymagają testu na urządzeniu.
 
 Poniższe opisy pochodzą z instrukcji README dołączonych do oryginalnych paczek oraz z historii projektu. Wyjaśniają, **po co przygotowano kolejną wersję**. Nie oznacza to, że każda została ponownie przetestowana na fizycznej drukarce i module ESP32.
 
