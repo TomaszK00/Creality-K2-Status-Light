@@ -1,0 +1,61 @@
+name: Build OTA candidate
+
+on:
+  push:
+    branches:
+      - candidate/v2.27
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  esp32c3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install PlatformIO
+        run: python -m pip install platformio==6.1.18
+      - name: Compile ESP32-C3
+        run: pio run -d PlatformIO -e esp32c3
+      - name: Validate and stage OTA candidate
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          image = Path('PlatformIO/.pio/build/esp32c3/firmware.bin').read_bytes()
+          # v2.25 update UI rejects an image larger than 1,900,000 bytes.
+          if not 100_000 < len(image) <= 1_900_000 or image[0] != 0xe9:
+              raise SystemExit(f'Unexpected ESP32 image: {len(image)} bytes')
+          sha = hashlib.sha256(image).hexdigest()
+          folder = Path('Software')
+          folder.mkdir(exist_ok=True)
+          (folder / 'LayerGlow_v2_27_OTA.bin').write_bytes(image)
+          # Legacy alias lets the existing v2.25 updater recognize this build.
+          (folder / 'K2_Status_Light_v2_27_OTA.bin').write_bytes(image)
+          manifest = {
+              'version': '2.27',
+              'file': 'K2_Status_Light_v2_27_OTA.bin',
+              'size': len(image),
+              'sha256': sha,
+          }
+          (folder / 'update.json').write_text(
+              json.dumps(manifest, indent=2) + '\n', encoding='utf-8'
+          )
+          print(f'OTA image: {len(image)} bytes, SHA-256 {sha}')
+          PY
+      - name: Keep compiled candidate on its branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Software/LayerGlow_v2_27_OTA.bin Software/K2_Status_Light_v2_27_OTA.bin Software/update.json
+          git commit -m "build: stage v2.27 OTA candidate"
+          git push origin HEAD:candidate/v2.27
