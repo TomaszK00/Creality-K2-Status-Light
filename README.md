@@ -9,6 +9,12 @@
 
 > **OTA test candidate: v2.27.** This release is compiled by GitHub Actions and has not yet been tested on a physical ESP32-C3 or printer. The previous published update was v2.15; v2.16 remains archived.
 
+## v2.27 test candidate
+
+Network and Printer now have separate panels. Wi-Fi uses one **Save & Connect** button. Printer discovery reports 0–100%, supports selecting among multiple results and can be repeated after disconnecting. The printer panel shows the live connection, state, print file and progress. Discovery also checks Moonraker on ports 7125 and 80 in the ESP32's local /24 network. The mobile language menu uses flags.
+
+The setup AP is `LayerGlow-Setup` with password `layerglowsetup`; the default local address is `http://layerglow.local/`. The update keeps saved settings in the existing device storage.
+
 ## About
 
 LayerGlow (formerly Creality K2 Status Light) uses an ESP32-C3 board, addressable LEDs, and a local browser interface to visualise Creality K2 printing progress. Its firmware communicates with the printer through the local network, offers status lighting and effects, and provides Wi-Fi and device configuration.
@@ -31,7 +37,9 @@ Specific functions depend on the installed firmware version. See the [change his
 
 | Item | Download |
 | --- | --- |
-| **OTA test candidate v2.27** | [LayerGlow .bin](Software/LayerGlow_v2_27_OTA.bin) · [legacy updater alias](Software/K2_Status_Light_v2_27_OTA.bin) |\n| **Previous OTA v2.15** | [Download .bin](Software/K2_Status_Light_v2_15_OTA.bin) |\n| **Source v2.27** | [Arduino sketch](Arduino/LayerGlow_v2_27/LayerGlow_v2_27.ino) · [PlatformIO project](PlatformIO/) |
+| **OTA test candidate v2.27** | [LayerGlow .bin](Software/LayerGlow_v2_27_OTA.bin) · [legacy updater alias](Software/K2_Status_Light_v2_27_OTA.bin) |
+| **Previous OTA v2.15** | [Download .bin](Software/K2_Status_Light_v2_15_OTA.bin) |
+| **Source v2.27** | [Arduino sketch](Arduino/LayerGlow_v2_27/LayerGlow_v2_27.ino) · [PlatformIO project](PlatformIO/) |
 | **Source code v2.15** | [View .ino](Arduino/archive/K2_Status_Light_v2_15.ino) |
 | **Archived build v2.16** | [OTA .bin](Software/archive/K2_Status_Light_v2_16_OTA.bin) · [source .ino](Arduino/archive/K2_Status_Light_v2_16.ino) |
 | **All historical versions** | [Firmware archive](Software/archive/README.md) · [Source archive](Arduino/README.md) |
