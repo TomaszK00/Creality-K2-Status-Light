@@ -1,5 +1,11 @@
 # Historia zmian — LayerGlow
 
+## v2.33 — wersja testowa (23 października 2026)
+
+- Ustawiono nazwę klienta DHCP przed uruchomieniem Wi-Fi. Router może teraz pokazywać `LayerGlow` zamiast automatycznej nazwy ESP32.
+- Adres `layerglow.local` i sieć ratunkowa `LayerGlow-Setup` pozostają takie same. Własna nazwa urządzenia pojawi się w routerze po ponownym uruchomieniu.
+- Kompilacja GitHub Actions i potwierdzenie na fizycznym routerze pozostają do wykonania.
+
 ## v2.32 — wersja testowa (23 października 2026)
 
 - Poszerzono kolumnę kolorów na komputerze; przyciski + i − nie nachodzą już na Jasność. Nazwy etapów są większe o 1 px, a z etykiet Jasności usunięto „(%)”.
