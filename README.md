@@ -4,7 +4,7 @@
 
 ![Project status](https://img.shields.io/badge/status-development-orange)
 ![Current OTA](https://img.shields.io/badge/current%20OTA-v2.34-orange)
-![Archived build](https://img.shields.io/badge/archived-v2.16-informational)
+![Historical archive](https://img.shields.io/badge/historical%20archive-v2.16-informational)
 ![Platform](https://img.shields.io/badge/platform-ESP32--C3-green)
 
 > **OTA test candidate: v2.34.** This release is compiled by GitHub Actions and has not yet been tested on a physical ESP32-C3 or printer. v2.33 remains available in Software/ for rollback; v2.16 remains archived.
@@ -13,7 +13,7 @@
 
 The web panel uses LayerGlow as the device name across network settings, update instructions, LED FAQ, restart messages and all four translations. Hardware model names remain in technical installation steps where they identify the required board. The DHCP hostname remains `LayerGlow`, and the default `layerglow.local` address and `LayerGlow-Setup` AP are unchanged.
 
-OTA releases publish a single LayerGlow-named image. Historical K2 binaries remain available in the archive.
+The current OTA manifest names a single LayerGlow image; older versions and recovery artifacts remain available. Historical K2 binaries remain available in the archive.
 
 The setup AP is `LayerGlow-Setup` with password `layerglowsetup`; the default local address is `http://layerglow.local/`. The update keeps saved settings in the existing device storage.
 
