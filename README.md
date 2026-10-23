@@ -67,6 +67,7 @@ The v2.15 source and the packaged installation notes target:
 ## Documentation
 
 - [Version-by-version changelog](CHANGELOG.md)
+- [Planned improvements and feature requests](docs/ROADMAP.md)
 - [Polish version history](docs/CHANGELOG_PL.md)
 - [Installation and first run](docs/INSTALLATION.md)
 - [Hardware and wiring](docs/HARDWARE.md)
