@@ -1,5 +1,13 @@
 # Historia zmian — LayerGlow
 
+## v2.32 — wersja testowa (23 października 2026)
+
+- Poszerzono kolumnę kolorów na komputerze; przyciski + i − nie nachodzą już na Jasność. Nazwy etapów są większe o 1 px, a z etykiet Jasności usunięto „(%)”.
+- We wszystkich językach nazwa aplikacji brzmi LayerGlow. W tytule, nagłówku i stopce dodano „by FatGiantCat”.
+- Dodano własną ikonę strony z symbolem L i trzema punktami LED.
+- Nowy plik OTA ma tylko nazwę `LayerGlow_v2_32_OTA.bin`. Usunięto zdublowane pliki K2 z wersji v2.27–v2.31; starsze oryginalne binarki zachowano.
+- Test interfejsu i kompilacja przeszły; test na urządzeniu pozostaje do wykonania.
+
 ## v2.31 — wersja testowa (23 października 2026)
 
 - Zwinięte pola Jasność i Puls pozostają obok siebie także na węższym telefonie.
@@ -37,7 +45,7 @@
 
 Poniższe opisy pochodzą z instrukcji README dołączonych do oryginalnych paczek oraz z historii projektu. Wyjaśniają, **po co przygotowano kolejną wersję**. Nie oznacza to, że każda została ponownie przetestowana na fizycznej drukarce i module ESP32.
 
-**Wersja ogłaszana przez GitHub OTA: 2.31 (testowa).** Wersja **2.16** jest zachowana w archiwum, ale nie została ustawiona jako aktualna w `Software/update.json`.
+**Wersja ogłaszana przez GitHub OTA: 2.32 (testowa).** Wersja **2.16** jest zachowana w archiwum, ale nie została ustawiona jako aktualna w `Software/update.json`.
 
 | Wersja | Dlaczego powstała |
 | --- | --- |

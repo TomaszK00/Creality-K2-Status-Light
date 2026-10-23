@@ -1,5 +1,13 @@
 # Firmware changelog
 
+## v2.32 — test candidate (23 October 2026)
+
+- Widen the desktop colour column so 12 swatches and +/- actions do not overlap Brightness; increase stage name text by 1 px and shorten Brightness labels.
+- Keep the LayerGlow name in English, Polish, Spanish and German; add FatGiantCat credit to the page title, header and footer.
+- Add the new LED favicon to the embedded page and the repository.
+- Publish only `LayerGlow_v2_32_OTA.bin` in the new OTA build and remove duplicate K2-named aliases from v2.27–v2.31. Older K2 firmware binaries remain historical artifacts.
+- UI checks and GitHub Actions compilation passed; physical ESP32-C3 and printer testing remain pending.
+
 ## v2.31 — test candidate (23 October 2026)
 
 - Keep collapsed Brightness and Pulse controls on the same row, including phone widths below 380 CSS pixels.
@@ -37,7 +45,7 @@
 
 Release descriptions are based on the README files included with the original firmware packages and on preserved repository history. They document **why each build was prepared**, not a claim that every feature was independently tested on physical hardware.
 
-**Published automatic OTA target:** v2.31 test candidate via [`Software/update.json`](Software/update.json). v2.16 is archived as a newer, not-yet-promoted build.
+**Published automatic OTA target:** v2.32 test candidate via [`Software/update.json`](Software/update.json). v2.16 is archived as a newer, not-yet-promoted build.
 
 | Version | Why it was created / main changes | Files |
 | --- | --- | --- |
