@@ -4,7 +4,7 @@
 
 - W panelu sieci, instrukcji OTA, FAQ i komunikatach restartu nazwa urządzenia to LayerGlow. Poprawiono wszystkie cztery wersje językowe.
 - W technicznych krokach wyboru płytki i wgrywania pozostawiono oznaczenie ESP32-C3, bo określa typ układu.
-- Kompilacja GitHub Actions i sprawdzenie na urządzeniu pozostają do wykonania.
+- Kompilacja GitHub Actions przeszła; sprawdzenie na urządzeniu pozostaje do wykonania.
 
 ## v2.33 — wersja testowa (23 października 2026)
 

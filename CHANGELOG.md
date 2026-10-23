@@ -4,7 +4,7 @@
 
 - Replace user-facing ESP32/ESP32-C3 labels with LayerGlow in the network panel, OTA instructions, FAQ and restart messages across English, Polish, Spanish and German.
 - Preserve the precise ESP32-C3 board and chip names in technical build and flashing instructions.
-- GitHub Actions build and physical device testing are pending.
+- GitHub Actions build passed; physical device testing remains pending.
 
 ## v2.33 — test candidate (23 October 2026)
 
