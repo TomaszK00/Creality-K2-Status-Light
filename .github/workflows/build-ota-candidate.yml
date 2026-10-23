@@ -3,7 +3,7 @@ name: Build OTA candidate
 on:
   push:
     branches:
-      - candidate/v2.28
+      - candidate/v2.29
   workflow_dispatch:
 
 permissions:
@@ -38,12 +38,12 @@ jobs:
           sha = hashlib.sha256(image).hexdigest()
           folder = Path('Software')
           folder.mkdir(exist_ok=True)
-          (folder / 'LayerGlow_v2_28_OTA.bin').write_bytes(image)
+          (folder / 'LayerGlow_v2_29_OTA.bin').write_bytes(image)
           # Legacy alias lets the existing v2.25 updater recognize this build.
-          (folder / 'K2_Status_Light_v2_28_OTA.bin').write_bytes(image)
+          (folder / 'K2_Status_Light_v2_29_OTA.bin').write_bytes(image)
           manifest = {
-              'version': '2.28',
-              'file': 'K2_Status_Light_v2_28_OTA.bin',
+              'version': '2.29',
+              'file': 'K2_Status_Light_v2_29_OTA.bin',
               'size': len(image),
               'sha256': sha,
           }
@@ -56,6 +56,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Software/LayerGlow_v2_28_OTA.bin Software/K2_Status_Light_v2_28_OTA.bin Software/update.json
-          git commit -m "build: stage v2.28 OTA candidate"
-          git push origin HEAD:candidate/v2.28
+          git add Software/LayerGlow_v2_29_OTA.bin Software/K2_Status_Light_v2_29_OTA.bin Software/update.json
+          git commit -m "build: stage v2.29 OTA candidate"
+          git push origin HEAD:candidate/v2.29
