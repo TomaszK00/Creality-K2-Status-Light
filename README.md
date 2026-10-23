@@ -1,6 +1,6 @@
-# Creality K2 Status Light
+# LayerGlow
 
-**DIY ESP32-C3 LED print-progress and status indicator for Creality K2 printers.**
+**ESP32-C3-powered LED status and progress indicator for 3D printers. Creality K2 is the currently documented integration; support for other models is planned.**
 
 ![Project status](https://img.shields.io/badge/status-development-orange)
 ![Current OTA](https://img.shields.io/badge/current%20OTA-v2.15-blue)
@@ -11,7 +11,7 @@
 
 ## About
 
-K2 Status Light uses an ESP32-C3 board, addressable LEDs, and a local browser interface to visualise Creality K2 printing progress. Its firmware communicates with the printer through the local network, offers status lighting and effects, and provides Wi-Fi and device configuration.
+LayerGlow (formerly Creality K2 Status Light) uses an ESP32-C3 board, addressable LEDs, and a local browser interface to visualise Creality K2 printing progress. Its firmware communicates with the printer through the local network, offers status lighting and effects, and provides Wi-Fi and device configuration.
 
 Features documented in the historical firmware include:
 - Progress display on 12 or 24 addressable LEDs (in pairs).
@@ -22,6 +22,10 @@ Features documented in the historical firmware include:
 - Manual OTA updates and a GitHub version-check workflow.
 
 Specific functions depend on the installed firmware version. See the [change history](CHANGELOG.md).
+
+## Project name and compatibility
+
+**LayerGlow** is the new project identity. The GitHub repository URL and historical firmware filenames currently retain the original `Creality-K2-Status-Light` naming to protect the existing OTA update path. **Only the Creality K2/Moonraker integration is documented for existing firmware; other brands and printers are not yet confirmed supported.** See [rename and OTA migration plan](docs/RENAMING_TO_LAYERGLOW.md).
 
 ## Firmware and source
 
@@ -68,6 +72,7 @@ The v2.15 source and the packaged installation notes target:
 
 - [Version-by-version changelog](CHANGELOG.md)
 - [Planned improvements and feature requests](docs/ROADMAP.md)
+- [LayerGlow rename and OTA compatibility plan](docs/RENAMING_TO_LAYERGLOW.md)
 - [Polish version history](docs/CHANGELOG_PL.md)
 - [Installation and first run](docs/INSTALLATION.md)
 - [Hardware and wiring](docs/HARDWARE.md)
