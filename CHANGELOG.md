@@ -1,5 +1,12 @@
 # Firmware changelog
 
+## v2.29 — test candidate (23 October 2026)
+
+- Make mobile navigation buttons, card spacing, typography and form controls consistent across the panel.
+- Keep the sticky LED preview compact when scrolling and make stage controls clearer on narrow phones.
+- Expand opened brightness and Pulse controls across the LED card; keep six palette colours per row where space permits.
+- CSS parsing, interaction checks and GitHub Actions compilation passed; physical device testing is still pending.
+
 ## v2.28 — test candidate (23 October 2026)
 
 - Mobile Network, Printer, Update and FAQ panels open full screen and close with their Close buttons; Language remains a popup.
@@ -17,7 +24,7 @@
 
 Release descriptions are based on the README files included with the original firmware packages and on preserved repository history. They document **why each build was prepared**, not a claim that every feature was independently tested on physical hardware.
 
-**Published automatic OTA target:** v2.28 test candidate via [`Software/update.json`](Software/update.json). v2.16 is archived as a newer, not-yet-promoted build.
+**Published automatic OTA target:** v2.29 test candidate via [`Software/update.json`](Software/update.json). v2.16 is archived as a newer, not-yet-promoted build.
 
 | Version | Why it was created / main changes | Files |
 | --- | --- | --- |

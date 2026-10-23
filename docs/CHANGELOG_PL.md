@@ -1,5 +1,12 @@
 # Historia zmian — LayerGlow
 
+## v2.29 — wersja testowa (23 października 2026)
+
+- Ujednolicono mobilne menu, odstępy, tekst i pola formularzy; główne przyciski mają wygodny rozmiar do dotknięcia.
+- Podgląd LED zajmuje mniej miejsca podczas przewijania, a ustawienia etapów są podzielone na wyraźne karty.
+- Po rozwinięciu suwaki Jasność i Puls korzystają z całej szerokości karty; paleta układa się czytelnie na wąskich telefonach.
+- Sprawdzono reguły CSS i działanie interfejsu; test na urządzeniu nadal pozostaje do wykonania.
+
 ## v2.28 — wersja testowa (23 października 2026)
 
 - Na telefonie panele Sieć, Drukarka, Aktualizacja i FAQ otwierają się na całym ekranie i zamykają przyciskiem; wybór języka pozostaje małym oknem.
@@ -17,7 +24,7 @@
 
 Poniższe opisy pochodzą z instrukcji README dołączonych do oryginalnych paczek oraz z historii projektu. Wyjaśniają, **po co przygotowano kolejną wersję**. Nie oznacza to, że każda została ponownie przetestowana na fizycznej drukarce i module ESP32.
 
-**Wersja ogłaszana przez GitHub OTA: 2.28 (testowa).** Wersja **2.16** jest zachowana w archiwum, ale nie została ustawiona jako aktualna w `Software/update.json`.
+**Wersja ogłaszana przez GitHub OTA: 2.29 (testowa).** Wersja **2.16** jest zachowana w archiwum, ale nie została ustawiona jako aktualna w `Software/update.json`.
 
 | Wersja | Dlaczego powstała |
 | --- | --- |
