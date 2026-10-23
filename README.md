@@ -3,15 +3,15 @@
 **ESP32-C3-powered LED status and progress indicator for 3D printers. Creality K2 is the currently documented integration; support for other models is planned.**
 
 ![Project status](https://img.shields.io/badge/status-development-orange)
-![Current OTA](https://img.shields.io/badge/current%20OTA-v2.27-orange)
+![Current OTA](https://img.shields.io/badge/current%20OTA-v2.28-orange)
 ![Archived build](https://img.shields.io/badge/archived-v2.16-informational)
 ![Platform](https://img.shields.io/badge/platform-ESP32--C3-green)
 
-> **OTA test candidate: v2.27.** This release is compiled by GitHub Actions and has not yet been tested on a physical ESP32-C3 or printer. The previous published update was v2.15; v2.16 remains archived.
+> **OTA test candidate: v2.28.** This release is compiled by GitHub Actions and has not yet been tested on a physical ESP32-C3 or printer. v2.27 remains available in Software/ for rollback; v2.16 remains archived.
 
-## v2.27 test candidate
+## v2.28 test candidate
 
-Network and Printer now have separate panels. Wi-Fi uses one **Save & Connect** button. Printer discovery reports 0–100%, supports selecting among multiple results and can be repeated after disconnecting. The printer panel shows the live connection, state, print file and progress. Discovery also checks Moonraker on ports 7125 and 80 in the ESP32's local /24 network. The mobile language menu uses flags.
+On mobile, Network, Printer, Update and FAQ use the full screen and close via their Close buttons; Language remains a compact chooser. Each LED stage now has a click-to-expand brightness slider (0–100%) and Pulse control with a checkbox and a 0–5000 ms slider. The selected effect stays visible above the selector. The short Test mode label leaves room for Repeat test after 100% beside it. The existing printer discovery and Wi-Fi features from v2.27 remain available.
 
 The setup AP is `LayerGlow-Setup` with password `layerglowsetup`; the default local address is `http://layerglow.local/`. The update keeps saved settings in the existing device storage.
 
@@ -23,7 +23,7 @@ Features documented in the historical firmware include:
 - Progress display on 12 or 24 addressable LEDs (in pairs).
 - Configurable colours, brightness, flashing patterns, and effects.
 - Browser-based configuration, preview, and LED test tools.
-- Wi-Fi onboarding via `LayerGlow-Setup` in v2.27 (`K2-LED-Setup` on older firmware).
+- Wi-Fi onboarding via `LayerGlow-Setup` in v2.28 (`K2-LED-Setup` on older firmware).
 - English, Polish, Spanish, and German UI in developed versions.
 - Manual OTA updates and a GitHub version-check workflow.
 
@@ -31,15 +31,16 @@ Specific functions depend on the installed firmware version. See the [change his
 
 ## Project name and compatibility
 
-**LayerGlow** is the project identity. The repository URL is `TomaszK00/LayerGlow`. v2.27 includes a legacy filename alias because older updater versions accept only filenames beginning with `K2_Status_Light`. **New printer integrations require testing on each printer model.** See [rename and OTA migration plan](docs/RENAMING_TO_LAYERGLOW.md).
+**LayerGlow** is the project identity. The repository URL is `TomaszK00/LayerGlow`. v2.28 includes a legacy filename alias because older updater versions accept only filenames beginning with `K2_Status_Light`. **New printer integrations require testing on each printer model.** See [rename and OTA migration plan](docs/RENAMING_TO_LAYERGLOW.md).
 
 ## Firmware and source
 
 | Item | Download |
 | --- | --- |
-| **OTA test candidate v2.27** | [LayerGlow .bin](Software/LayerGlow_v2_27_OTA.bin) · [legacy updater alias](Software/K2_Status_Light_v2_27_OTA.bin) |
-| **Previous OTA v2.15** | [Download .bin](Software/K2_Status_Light_v2_15_OTA.bin) |
-| **Source v2.27** | [Arduino sketch](Arduino/LayerGlow_v2_27/LayerGlow_v2_27.ino) · [PlatformIO project](PlatformIO/) |
+| **OTA test candidate v2.28** | [LayerGlow .bin](Software/LayerGlow_v2_28_OTA.bin) · [legacy updater alias](Software/K2_Status_Light_v2_28_OTA.bin) |
+| **Previous OTA v2.27** | [LayerGlow .bin](Software/LayerGlow_v2_27_OTA.bin) · [legacy alias](Software/K2_Status_Light_v2_27_OTA.bin) |
+| **Older OTA v2.15** | [Download .bin](Software/K2_Status_Light_v2_15_OTA.bin) |
+| **Source v2.28** | [Arduino sketch](Arduino/LayerGlow_v2_28/LayerGlow_v2_28.ino) · [PlatformIO project](PlatformIO/) |
 | **Source code v2.15** | [View .ino](Arduino/archive/K2_Status_Light_v2_15.ino) |
 | **Archived build v2.16** | [OTA .bin](Software/archive/K2_Status_Light_v2_16_OTA.bin) · [source .ino](Arduino/archive/K2_Status_Light_v2_16.ino) |
 | **All historical versions** | [Firmware archive](Software/archive/README.md) · [Source archive](Arduino/README.md) |
@@ -61,7 +62,7 @@ The v2.15 source and the packaged installation notes target:
 
 ## Installation
 
-**Existing installation:** use the device's built-in update page with the correct compatible `_OTA.bin` file. Do not disconnect power during the update. The GitHub manifest advertises **2.27** only after the new OTA binary has been compiled, checked for size and committed. This is a test candidate. Devices running older firmware may still use the former repository URL; if GitHub update detection fails there, upload the v2.27 OTA BIN manually once, then use the new URL for later versions.
+**Existing installation:** use the device's built-in update page with the correct compatible `_OTA.bin` file. Do not disconnect power during the update. The GitHub manifest advertises **2.28** after the new OTA binary has been compiled, checked for size and committed. This is a test candidate. Devices running older firmware may still use the former repository URL; if GitHub update detection fails there, upload the v2.28 OTA BIN manually once, then use the new URL for later versions.
 
 **New ESP32 device:** see the [first-time installation guide](docs/INSTALLATION.md) for the historically packaged v2.3 USB image and the Arduino sketch option. USB flashing can erase saved settings and requires the correct chip/flash/partition settings. Firmware has not been retested on every possible board.
 

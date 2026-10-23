@@ -1,5 +1,12 @@
 # Firmware changelog
 
+## v2.28 — test candidate (23 October 2026)
+
+- Mobile Network, Printer, Update and FAQ panels open full screen and close with their Close buttons; Language remains a popup.
+- LED brightness uses an expandable 0–100% slider, and Pulse uses an expandable checkbox with a 0–5000 ms slider in every stage.
+- Keep the selected effect visible in each mobile row and shorten the Test mode label so Repeat test fits beside it.
+- JavaScript UI checks passed. GitHub Actions compiled the OTA binary; device and printer testing remains pending.
+
 ## v2.27 — test candidate (23 October 2026)
 
 - Split Network and Printer into separate panels; Wi-Fi Save & Connect uses one button.
@@ -10,7 +17,7 @@
 
 Release descriptions are based on the README files included with the original firmware packages and on preserved repository history. They document **why each build was prepared**, not a claim that every feature was independently tested on physical hardware.
 
-**Published automatic OTA target:** v2.15 via [`Software/update.json`](Software/update.json). v2.16 is archived as a newer, not-yet-promoted build.
+**Published automatic OTA target:** v2.28 test candidate via [`Software/update.json`](Software/update.json). v2.16 is archived as a newer, not-yet-promoted build.
 
 | Version | Why it was created / main changes | Files |
 | --- | --- | --- |

@@ -1,5 +1,12 @@
 # Historia zmian — LayerGlow
 
+## v2.28 — wersja testowa (23 października 2026)
+
+- Na telefonie panele Sieć, Drukarka, Aktualizacja i FAQ otwierają się na całym ekranie i zamykają przyciskiem; wybór języka pozostaje małym oknem.
+- Jasność w każdym etapie ustawia rozwijany suwak 0–100%, a Puls ma wspólny panel z przełącznikiem i suwakiem 0–5000 ms.
+- Wybrany efekt jest widoczny także na telefonie. Skrócono etykietę trybu testowego, aby pole powtarzania mieściło się obok.
+- Test interfejsu przeszedł; binarkę OTA skompilował GitHub Actions. Test na urządzeniu i drukarce jest nadal potrzebny.
+
 ## v2.27 — wersja testowa (23 października 2026)
 
 - Rozdzielono okna Sieć i Drukarka. Jeden przycisk zapisuje ustawienia Wi-Fi i rozpoczyna połączenie.
@@ -10,7 +17,7 @@
 
 Poniższe opisy pochodzą z instrukcji README dołączonych do oryginalnych paczek oraz z historii projektu. Wyjaśniają, **po co przygotowano kolejną wersję**. Nie oznacza to, że każda została ponownie przetestowana na fizycznej drukarce i module ESP32.
 
-**Wersja ogłaszana przez GitHub OTA: 2.15.** Wersja **2.16** jest zachowana w archiwum, ale nie została ustawiona jako aktualna w `Software/update.json`.
+**Wersja ogłaszana przez GitHub OTA: 2.28 (testowa).** Wersja **2.16** jest zachowana w archiwum, ale nie została ustawiona jako aktualna w `Software/update.json`.
 
 | Wersja | Dlaczego powstała |
 | --- | --- |
