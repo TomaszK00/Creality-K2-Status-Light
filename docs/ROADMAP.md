@@ -8,7 +8,13 @@ Last updated: 23 October 2026.
 
 - [ ] Abstract printer communication into adapters rather than assuming every printer supports Moonraker.
 - [ ] Test and document each future printer integration before marking it as supported.
-- [ ] Coordinate repository rename with a tested firmware migration that preserves OTA update access for existing devices.
+- [x] Rename the public repository to `TomaszK00/LayerGlow`.
+- [ ] Verify OTA update discovery and installation from older K2-branded firmware after the repository rename, on real hardware.
+
+## Current status
+
+- **v2.34 is a build-tested candidate, not a confirmed hardware release.** Previously requested UI changes may be implemented in current code; check the live panel before closing the tasks below.
+- Keep physical OTA testing and backward compatibility checks open until verified.
 
 ## Web interface and LED configuration
 
@@ -22,8 +28,8 @@ Last updated: 23 October 2026.
 
 - [ ] Expand **Network and printer status** to show meaningful connection diagnostics after joining home Wi-Fi: connection state, SSID, device IP address, subnet mask, gateway, DNS, signal strength, and connected printer host/IP and port, wherever available.
 - [ ] Present separate Wi-Fi, printer API and update-server connection states; show clear failure messages.
-- [ ] Support opening the settings panel by a **stable local hostname**, e.g. `http://k2-status-light.local/`, using mDNS where supported, even if the DHCP-assigned IP address changes.
-- [ ] Make the hostname discoverable in the status panel; document that `.local` resolution depends on client/OS/network support and may not work across isolated networks.
+- [x] Provide a **stable local hostname** in the current v2.34 test candidate, e.g. `http://layerglow.local/`, using mDNS where supported, even if the DHCP-assigned IP address changes.
+- [ ] Verify hostname discovery and `layerglow.local` resolution on target routers and client devices; `.local` may not work across isolated networks.
 - [ ] Never show saved Wi-Fi passwords or secret tokens in diagnostics, logs, exports or screenshots.
 
 ## Release requirements
