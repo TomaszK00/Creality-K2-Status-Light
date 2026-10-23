@@ -1,8 +1,14 @@
 # Development roadmap
 
-This document records requested enhancements to **Creality K2 Status Light**. Items below are **planned / to verify**, not advertised as already implemented. The firmware archive and OTA release manifest remain authoritative for released features.
+This document records requested enhancements to **LayerGlow**. Items below are **planned / to verify**, not advertised as already implemented. The firmware archive and OTA release manifest remain authoritative for released features.
 
 Last updated: 23 October 2026.
+
+## Multi-printer support
+
+- [ ] Abstract printer communication into adapters rather than assuming every printer supports Moonraker.
+- [ ] Test and document each future printer integration before marking it as supported.
+- [ ] Coordinate repository rename with a tested firmware migration that preserves OTA update access for existing devices.
 
 ## Web interface and LED configuration
 
