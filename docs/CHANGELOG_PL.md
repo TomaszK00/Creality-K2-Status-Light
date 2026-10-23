@@ -1,5 +1,11 @@
 # Historia zmian — LayerGlow
 
+## v2.31 — wersja testowa (23 października 2026)
+
+- Zwinięte pola Jasność i Puls pozostają obok siebie także na węższym telefonie.
+- Po ustawieniu wartości mobilny suwak chowa się po około 800 ms; nazwa i wybrana wartość pozostają widoczne.
+- Test interfejsu przeszedł; działanie na urządzeniu nadal wymaga sprawdzenia.
+
 ## v2.30 — wersja testowa (23 października 2026)
 
 - Na telefonie górne menu to jeden wiersz etykiet i flaga języka.
@@ -31,7 +37,7 @@
 
 Poniższe opisy pochodzą z instrukcji README dołączonych do oryginalnych paczek oraz z historii projektu. Wyjaśniają, **po co przygotowano kolejną wersję**. Nie oznacza to, że każda została ponownie przetestowana na fizycznej drukarce i module ESP32.
 
-**Wersja ogłaszana przez GitHub OTA: 2.30 (testowa).** Wersja **2.16** jest zachowana w archiwum, ale nie została ustawiona jako aktualna w `Software/update.json`.
+**Wersja ogłaszana przez GitHub OTA: 2.31 (testowa).** Wersja **2.16** jest zachowana w archiwum, ale nie została ustawiona jako aktualna w `Software/update.json`.
 
 | Wersja | Dlaczego powstała |
 | --- | --- |

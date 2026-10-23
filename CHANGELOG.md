@@ -1,5 +1,11 @@
 # Firmware changelog
 
+## v2.31 — test candidate (23 October 2026)
+
+- Keep collapsed Brightness and Pulse controls on the same row, including phone widths below 380 CSS pixels.
+- Collapse the expanded mobile slider about 800 ms after its value is changed; its chosen value remains visible.
+- JavaScript UI checks and GitHub Actions compilation passed; hardware testing remains pending.
+
 ## v2.30 — test candidate (23 October 2026)
 
 - Put mobile navigation text and language flag in one row while preserving tappable controls.
@@ -31,7 +37,7 @@
 
 Release descriptions are based on the README files included with the original firmware packages and on preserved repository history. They document **why each build was prepared**, not a claim that every feature was independently tested on physical hardware.
 
-**Published automatic OTA target:** v2.30 test candidate via [`Software/update.json`](Software/update.json). v2.16 is archived as a newer, not-yet-promoted build.
+**Published automatic OTA target:** v2.31 test candidate via [`Software/update.json`](Software/update.json). v2.16 is archived as a newer, not-yet-promoted build.
 
 | Version | Why it was created / main changes | Files |
 | --- | --- | --- |

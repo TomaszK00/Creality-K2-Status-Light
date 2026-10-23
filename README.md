@@ -3,15 +3,15 @@
 **ESP32-C3-powered LED status and progress indicator for 3D printers. Creality K2 is the currently documented integration; support for other models is planned.**
 
 ![Project status](https://img.shields.io/badge/status-development-orange)
-![Current OTA](https://img.shields.io/badge/current%20OTA-v2.30-orange)
+![Current OTA](https://img.shields.io/badge/current%20OTA-v2.31-orange)
 ![Archived build](https://img.shields.io/badge/archived-v2.16-informational)
 ![Platform](https://img.shields.io/badge/platform-ESP32--C3-green)
 
-> **OTA test candidate: v2.30.** This release is compiled by GitHub Actions and has not yet been tested on a physical ESP32-C3 or printer. v2.29 remains available in Software/ for rollback; v2.16 remains archived.
+> **OTA test candidate: v2.31.** This release is compiled by GitHub Actions and has not yet been tested on a physical ESP32-C3 or printer. v2.30 remains available in Software/ for rollback; v2.16 remains archived.
 
-## v2.30 test candidate
+## v2.31 test candidate
 
-On phones the top menu uses a single row of text labels and a language flag. The LED preview has a compact line for test progress, the number of lit LEDs and printer state; its manual progress slider and large percentage are hidden on mobile. Brightness and Pulse stay side by side, including when expanded. Each Effect label displays the selected effect beside it. Desktop controls remain available.
+On narrow phones, collapsed Brightness and Pulse controls now stay side by side. Tap a control to reveal its slider, adjust it, and the slider collapses shortly after the adjustment while keeping the label and chosen value visible. The other mobile layout and desktop controls remain available.
 
 The setup AP is `LayerGlow-Setup` with password `layerglowsetup`; the default local address is `http://layerglow.local/`. The update keeps saved settings in the existing device storage.
 
@@ -23,7 +23,7 @@ Features documented in the historical firmware include:
 - Progress display on 12 or 24 addressable LEDs (in pairs).
 - Configurable colours, brightness, flashing patterns, and effects.
 - Browser-based configuration, preview, and LED test tools.
-- Wi-Fi onboarding via `LayerGlow-Setup` in v2.30 (`K2-LED-Setup` on older firmware).
+- Wi-Fi onboarding via `LayerGlow-Setup` in v2.31 (`K2-LED-Setup` on older firmware).
 - English, Polish, Spanish, and German UI in developed versions.
 - Manual OTA updates and a GitHub version-check workflow.
 
@@ -31,18 +31,19 @@ Specific functions depend on the installed firmware version. See the [change his
 
 ## Project name and compatibility
 
-**LayerGlow** is the project identity. The repository URL is `TomaszK00/LayerGlow`. v2.30 includes a legacy filename alias because older updater versions accept only filenames beginning with `K2_Status_Light`. **New printer integrations require testing on each printer model.** See [rename and OTA migration plan](docs/RENAMING_TO_LAYERGLOW.md).
+**LayerGlow** is the project identity. The repository URL is `TomaszK00/LayerGlow`. v2.31 includes a legacy filename alias because older updater versions accept only filenames beginning with `K2_Status_Light`. **New printer integrations require testing on each printer model.** See [rename and OTA migration plan](docs/RENAMING_TO_LAYERGLOW.md).
 
 ## Firmware and source
 
 | Item | Download |
 | --- | --- |
-| **OTA test candidate v2.30** | [LayerGlow .bin](Software/LayerGlow_v2_30_OTA.bin) · [legacy updater alias](Software/K2_Status_Light_v2_30_OTA.bin) |
+| **OTA test candidate v2.31** | [LayerGlow .bin](Software/LayerGlow_v2_31_OTA.bin) · [legacy updater alias](Software/K2_Status_Light_v2_31_OTA.bin) |
+| **Previous OTA v2.30** | [LayerGlow .bin](Software/LayerGlow_v2_30_OTA.bin) · [legacy alias](Software/K2_Status_Light_v2_30_OTA.bin) |
 | **Previous OTA v2.29** | [LayerGlow .bin](Software/LayerGlow_v2_29_OTA.bin) · [legacy alias](Software/K2_Status_Light_v2_29_OTA.bin) |
 | **Earlier OTA v2.28** | [LayerGlow .bin](Software/LayerGlow_v2_28_OTA.bin) · [legacy alias](Software/K2_Status_Light_v2_28_OTA.bin) |
 | **Earlier OTA v2.27** | [LayerGlow .bin](Software/LayerGlow_v2_27_OTA.bin) · [legacy alias](Software/K2_Status_Light_v2_27_OTA.bin) |
 | **Older OTA v2.15** | [Download .bin](Software/K2_Status_Light_v2_15_OTA.bin) |
-| **Source v2.30** | [Arduino sketch](Arduino/LayerGlow_v2_30/LayerGlow_v2_30.ino) · [PlatformIO project](PlatformIO/) |
+| **Source v2.31** | [Arduino sketch](Arduino/LayerGlow_v2_31/LayerGlow_v2_31.ino) · [PlatformIO project](PlatformIO/) |
 | **Source code v2.15** | [View .ino](Arduino/archive/K2_Status_Light_v2_15.ino) |
 | **Archived build v2.16** | [OTA .bin](Software/archive/K2_Status_Light_v2_16_OTA.bin) · [source .ino](Arduino/archive/K2_Status_Light_v2_16.ino) |
 | **All historical versions** | [Firmware archive](Software/archive/README.md) · [Source archive](Arduino/README.md) |
@@ -64,7 +65,7 @@ The v2.15 source and the packaged installation notes target:
 
 ## Installation
 
-**Existing installation:** use the device's built-in update page with the correct compatible `_OTA.bin` file. Do not disconnect power during the update. The GitHub manifest advertises **2.30** after the new OTA binary has been compiled, checked for size and committed. This is a test candidate. Devices running older firmware may still use the former repository URL; if GitHub update detection fails there, upload the v2.30 OTA BIN manually once, then use the new URL for later versions.
+**Existing installation:** use the device's built-in update page with the correct compatible `_OTA.bin` file. Do not disconnect power during the update. The GitHub manifest advertises **2.31** after the new OTA binary has been compiled, checked for size and committed. This is a test candidate. Devices running older firmware may still use the former repository URL; if GitHub update detection fails there, upload the v2.31 OTA BIN manually once, then use the new URL for later versions.
 
 **New ESP32 device:** see the [first-time installation guide](docs/INSTALLATION.md) for the historically packaged v2.3 USB image and the Arduino sketch option. USB flashing can erase saved settings and requires the correct chip/flash/partition settings. Firmware has not been retested on every possible board.
 
