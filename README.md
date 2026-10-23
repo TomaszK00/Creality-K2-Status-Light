@@ -3,15 +3,15 @@
 **ESP32-C3-powered LED status and progress indicator for 3D printers. Creality K2 is the documented hardware integration; other printer options in recent firmware are experimental.**
 
 ![Project status](https://img.shields.io/badge/status-development-orange)
-![Current OTA](https://img.shields.io/badge/current%20OTA-v2.33-orange)
+![Current OTA](https://img.shields.io/badge/current%20OTA-v2.34-orange)
 ![Archived build](https://img.shields.io/badge/archived-v2.16-informational)
 ![Platform](https://img.shields.io/badge/platform-ESP32--C3-green)
 
-> **OTA test candidate: v2.33.** This release is compiled by GitHub Actions and has not yet been tested on a physical ESP32-C3 or printer. v2.32 remains available in Software/ for rollback; v2.16 remains archived.
+> **OTA test candidate: v2.34.** This release is compiled by GitHub Actions and has not yet been tested on a physical ESP32-C3 or printer. v2.33 remains available in Software/ for rollback; v2.16 remains archived.
 
-## v2.33 test candidate
+## v2.34 test candidate
 
-The DHCP client now reports `LayerGlow` to the router instead of the ESP32-generated name. The default `layerglow.local` address and `LayerGlow-Setup` AP remain unchanged. If a custom device name is configured, the router name follows it after a restart.
+The web panel uses LayerGlow as the device name across network settings, update instructions, LED FAQ, restart messages and all four translations. Hardware model names remain in technical installation steps where they identify the required board. The DHCP hostname remains `LayerGlow`, and the default `layerglow.local` address and `LayerGlow-Setup` AP are unchanged.
 
 OTA releases publish a single LayerGlow-named image. Historical K2 binaries remain available in the archive.
 
@@ -25,7 +25,7 @@ Features documented in the historical firmware include:
 - Progress display on 12 or 24 addressable LEDs (in pairs).
 - Configurable colours, brightness, flashing patterns, and effects.
 - Browser-based configuration, preview, and LED test tools.
-- Wi-Fi onboarding via `LayerGlow-Setup` in v2.33 (`K2-LED-Setup` on older firmware).
+- Wi-Fi onboarding via `LayerGlow-Setup` in v2.34 (`K2-LED-Setup` on older firmware).
 - English, Polish, Spanish, and German UI in developed versions.
 - Manual OTA updates and a GitHub version-check workflow.
 
@@ -33,13 +33,14 @@ Specific functions depend on the installed firmware version. See the [change his
 
 ## Project name and compatibility
 
-**LayerGlow** is the project identity. The repository URL is `TomaszK00/LayerGlow`. v2.33 publishes only a LayerGlow-named OTA image. Firmware older than the LayerGlow updater may need one manual OTA upload before GitHub update detection works. **New printer integrations require testing on each printer model.** See [rename and OTA migration plan](docs/RENAMING_TO_LAYERGLOW.md).
+**LayerGlow** is the project identity. The repository URL is `TomaszK00/LayerGlow`. v2.34 publishes only a LayerGlow-named OTA image. Firmware older than the LayerGlow updater may need one manual OTA upload before GitHub update detection works. **New printer integrations require testing on each printer model.** See [rename and OTA migration plan](docs/RENAMING_TO_LAYERGLOW.md).
 
 ## Firmware and source
 
 | Item | Download |
 | --- | --- |
-| **OTA test candidate v2.33** | [LayerGlow .bin](Software/LayerGlow_v2_33_OTA.bin) |
+| **OTA test candidate v2.34** | [LayerGlow .bin](Software/LayerGlow_v2_34_OTA.bin) |
+| **Previous OTA v2.33** | [LayerGlow .bin](Software/LayerGlow_v2_33_OTA.bin) |
 | **Previous OTA v2.32** | [LayerGlow .bin](Software/LayerGlow_v2_32_OTA.bin) |
 | **Previous OTA v2.31** | [LayerGlow .bin](Software/LayerGlow_v2_31_OTA.bin) |
 | **Previous OTA v2.30** | [LayerGlow .bin](Software/LayerGlow_v2_30_OTA.bin) |
@@ -47,7 +48,7 @@ Specific functions depend on the installed firmware version. See the [change his
 | **Earlier OTA v2.28** | [LayerGlow .bin](Software/LayerGlow_v2_28_OTA.bin) |
 | **Earlier OTA v2.27** | [LayerGlow .bin](Software/LayerGlow_v2_27_OTA.bin) |
 | **Older OTA v2.15** | [Download .bin](Software/K2_Status_Light_v2_15_OTA.bin) |
-| **Source v2.33** | [Arduino sketch](Arduino/LayerGlow_v2_33/LayerGlow_v2_33.ino) · [PlatformIO project](PlatformIO/) |
+| **Source v2.34** | [Arduino sketch](Arduino/LayerGlow_v2_34/LayerGlow_v2_34.ino) · [PlatformIO project](PlatformIO/) |
 | **Source code v2.15** | [View .ino](Arduino/archive/K2_Status_Light_v2_15.ino) |
 | **Archived build v2.16** | [OTA .bin](Software/archive/K2_Status_Light_v2_16_OTA.bin) · [source .ino](Arduino/archive/K2_Status_Light_v2_16.ino) |
 | **All historical versions** | [Firmware archive](Software/archive/README.md) · [Source archive](Arduino/README.md) |
@@ -69,7 +70,7 @@ The v2.15 source and the packaged installation notes target:
 
 ## Installation
 
-**Existing installation:** use the device's built-in update page with the correct compatible `_OTA.bin` file. Do not disconnect power during the update. The GitHub manifest advertises **2.33** after the new OTA binary has been compiled, checked for size and committed. This is a test candidate. Devices running older firmware may still use the former repository URL; if GitHub update detection fails there, upload the v2.33 LayerGlow OTA BIN manually once, then use the new URL for later versions.
+**Existing installation:** use the device's built-in update page with the correct compatible `_OTA.bin` file. Do not disconnect power during the update. The GitHub manifest advertises **2.34** after the new OTA binary has been compiled, checked for size and committed. This is a test candidate. Devices running older firmware may still use the former repository URL; if GitHub update detection fails there, upload the v2.34 LayerGlow OTA BIN manually once, then use the new URL for later versions.
 
 **New ESP32 device:** see the [first-time installation guide](docs/INSTALLATION.md) for the historically packaged v2.3 USB image and the Arduino sketch option. USB flashing can erase saved settings and requires the correct chip/flash/partition settings. Firmware has not been retested on every possible board.
 

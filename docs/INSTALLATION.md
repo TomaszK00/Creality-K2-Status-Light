@@ -4,16 +4,16 @@
 
 Original packaged firmware and source files target **ESP32-C3 SuperMini / ESP32C3 Dev Module** (4 MB flash), with a SK6812 RGBW strip and local Moonraker communication to a Creality K2. Consult [hardware notes](HARDWARE.md) before connecting power.
 
-The current OTA manifest points to **v2.15**, whose [Arduino source is available](../Arduino/archive/K2_Status_Light_v2_15.ino). The newer v2.16 is archived but not promoted as the default update.
+The current OTA manifest points to the **v2.34 test candidate**, whose [Arduino source is available](../Arduino/LayerGlow_v2_34/LayerGlow_v2_34.ino). The original v2.3 first-flash image and v2.15 source remain historical references; v2.16 remains archived.
 
 ## Option A — upgrade an already running compatible device
 
 1. Confirm the installed firmware includes a functional OTA update page and that the board has sufficient OTA app partition space.
 2. Open the device's web interface on the trusted local network.
-3. Use the firmware update control to select the compatible [v2.15 OTA binary](../Software/K2_Status_Light_v2_15_OTA.bin), or follow the firmware's GitHub-update workflow.
+3. Use the firmware update control to select the compatible [LayerGlow v2.34 OTA binary](../Software/LayerGlow_v2_34_OTA.bin), or follow the firmware's GitHub-update workflow. An older installed version may need one manual OTA upload after the repository rename.
 4. Keep power stable throughout upload, validation and restart.
 
-**Do not flash an OTA image directly at address 0x0** as if it were a full USB image. Do not install the archived v2.16 just because its version number is higher; it has not been selected for public auto-updates.
+**Do not flash an OTA image directly at address 0x0** as if it were a full USB image. The current v2.34 firmware is a test candidate: its build and checksum are checked, but installation on the physical board still requires verification.
 
 ## Option B — first-time flash using the original v2.3 USB image
 
@@ -36,19 +36,19 @@ After first installation, follow the AP setup flow and use compatible OTA update
 
 1. Install **Arduino IDE 2.x**.
 2. Install the **ESP32 boards package by Espressif Systems**.
-3. Install **ArduinoJson v7** and **Adafruit NeoPixel** using Library Manager.
-4. Download the desired original [Arduino source](../Arduino/README.md); for current v2.15 use [this sketch](../Arduino/archive/K2_Status_Light_v2_15.ino).
+3. Install **ArduinoJson v7** and **Adafruit NeoPixel** using Library Manager. The current LayerGlow sketch includes PubSubClient in its `src/` folder.
+4. Download the [current LayerGlow v2.34 sketch](../Arduino/LayerGlow_v2_34/LayerGlow_v2_34.ino) with its complete `src/` folder, or select a historical [Arduino source](../Arduino/README.md).
 5. Select **ESP32C3 Dev Module**, 4 MB flash, USB CDC On Boot enabled if available, and an OTA-compatible layout such as **Minimal SPIFFS (1.9 MB APP with OTA)**.
 6. Confirm GPIO4, LED model, power, printer IP and any network/security settings match your real build.
 7. Compile, inspect warnings, and upload over USB. If changing partition layouts, expect to need reconfiguration afterwards.
 
-Package and library versions may affect compilation; builds have not been recompiled and hardware-tested as part of repository restoration.
+Package and library versions may affect compilation. The current candidate is built by GitHub Actions; physical installation and printer operation remain to be checked.
 
 ## First-time Wi-Fi configuration
 
-Most historical builds provide the setup access point **`K2-LED-Setup`** with default password **`k2ledsetup`**, typically at `http://192.168.4.1`. Configure a 2.4 GHz home network and the printer connection from the web panel. Some older versions require a physical reset after changing Wi-Fi; v2.15 includes background reconnection.
+Current LayerGlow firmware provides the setup access point **`LayerGlow-Setup`** with default password **`layerglowsetup`**, typically at `http://192.168.4.1`. Configure a 2.4 GHz home network and the printer connection from the web panel. On the home network the default address is `http://layerglow.local/`. Historical builds used **`K2-LED-Setup`** with password **`k2ledsetup`**; some required a physical reset after changing Wi-Fi.
 
-**Security warning:** This is a documented default, not a strong secret. Several historical firmware versions lack web-panel authentication. Use only on a trusted LAN, change defaults where supported, and do not forward the ESP32 web interface to the public Internet.
+**Security warning:** This is a documented default, not a strong secret. Several historical firmware versions lack web-panel authentication. Use only on a trusted LAN, change defaults where supported, and do not forward the LayerGlow web interface to the public Internet.
 
 ## Hardware and safety notes
 

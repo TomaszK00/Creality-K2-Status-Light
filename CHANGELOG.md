@@ -1,5 +1,11 @@
 # Firmware changelog
 
+## v2.34 — test candidate (23 October 2026)
+
+- Replace user-facing ESP32/ESP32-C3 labels with LayerGlow in the network panel, OTA instructions, FAQ and restart messages across English, Polish, Spanish and German.
+- Preserve the precise ESP32-C3 board and chip names in technical build and flashing instructions.
+- GitHub Actions build and physical device testing are pending.
+
 ## v2.33 — test candidate (23 October 2026)
 
 - Set the Wi-Fi DHCP hostname before starting the radio. Routers can now show `LayerGlow` in their device lists instead of the ESP32-generated name.

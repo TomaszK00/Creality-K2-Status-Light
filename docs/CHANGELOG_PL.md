@@ -1,5 +1,11 @@
 # Historia zmian — LayerGlow
 
+## v2.34 — wersja testowa (23 października 2026)
+
+- W panelu sieci, instrukcji OTA, FAQ i komunikatach restartu nazwa urządzenia to LayerGlow. Poprawiono wszystkie cztery wersje językowe.
+- W technicznych krokach wyboru płytki i wgrywania pozostawiono oznaczenie ESP32-C3, bo określa typ układu.
+- Kompilacja GitHub Actions i sprawdzenie na urządzeniu pozostają do wykonania.
+
 ## v2.33 — wersja testowa (23 października 2026)
 
 - Ustawiono nazwę klienta DHCP przed uruchomieniem Wi-Fi. Router może teraz pokazywać `LayerGlow` zamiast automatycznej nazwy ESP32.
