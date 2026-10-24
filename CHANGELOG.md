@@ -4,7 +4,7 @@
 
 - Replace the footer's three round theme controls with labelled Auto, Light and Dark checkboxes in one row.
 - Keep only one mode selected at a time. Preserve saved browser preferences and automatic response to the device appearance.
-- Interface logic checks passed; physical device testing remains pending.
+- Interface logic checks and GitHub Actions compilation passed; physical device testing remains pending.
 
 ## v2.38 — test candidate (24 October 2026)
 
