@@ -1,5 +1,11 @@
 # Firmware changelog
 
+## v2.41 — test candidate (24 October 2026)
+
+- Add Printer reading to Test state. It disables simulation; every other state activates the test on the preview and connected strip.
+- Remove the Test mode checkbox and move Play progress automatically into its place. Keep Repeat test after 100% beside it; adjust the mobile progress label for live readings.
+- Update the FAQ in four languages and verify the switch between printer, test states and automatic test progress. Hardware testing remains pending.
+
 ## v2.40 — test candidate (24 October 2026)
 
 - Keep the LED preview in one fixed-width row for every physical strip length.
