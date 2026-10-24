@@ -13,6 +13,8 @@
 
 The LED preview remains one full-width row. It shows up to 48 LEDs; for physical strips of 49–300 LEDs, 48 preview lights represent the complete strip and the real LED count stays visible. Colour zones, printing progress and animation positions are sampled across the physical strip. Only the browser preview is capped; the configured number of connected LEDs remains unchanged.
 
+OTA v2.40: 1,750,624 bytes; SHA-256 `e3cf85c709f7b9839185010fcb740676adf98c8fe974667e32c83bc31af07cb1`.
+
 ## v2.39 test candidate
 
 The footer theme selector now shows three labelled checkboxes in one row: Auto, Light and Dark. Choosing one clears the other two; one choice always stays active. Existing saved appearance preferences and the automatic system mode continue to work.
