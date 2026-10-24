@@ -13,6 +13,8 @@
 
 On phones, the top menu now hides when the Colours and LED settings heading passes beneath the sticky LED preview, and returns when the heading appears again. The footer uses three coloured dots for automatic, light and dark appearance, with a label for the selected mode. The setting is remembered and the automatic choice follows the device appearance.
 
+OTA v2.38: 1,749,696 bytes; SHA-256 `0ba86c089c91e4cbc0363dcb94cdf0db559b4cedc8c90c344695a57d4a4c3632`.
+
 ## v2.37 test candidate
 
 On phones, the +/− colour controls share the first row for 1–4 colours, the second row for 5–10, and the third row for 11–12. The selected effect name appears alongside its label. The previous FAQ and appearance controls remain available.
