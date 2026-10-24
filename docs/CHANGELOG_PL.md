@@ -1,5 +1,11 @@
 # Historia zmian — LayerGlow
 
+## v2.36 — wersja testowa (24 października 2026)
+
+- Przeniesiono sygnały niebieskiej diody do trzech rozwijanych pytań FAQ z krótkimi wzorami błysków. Usunięto osobny blok z opisem diody.
+- Przy stopce dodano motyw automatyczny zgodny z systemem, jasny i ciemny dla całej strony. Wybór jest zapamiętywany w przeglądarce, a tryb automatyczny reaguje na zmianę motywu urządzenia.
+- Zaktualizowano cztery języki i sprawdzono wyszukiwanie FAQ oraz przełączanie motywu. Kompilacja GitHub Actions i test sprzętowy pozostają do wykonania.
+
 ## v2.35 — wersja testowa (24 października 2026)
 
 - Rozbudowano FAQ do 29 pytań z wyszukiwarką: pierwsze uruchomienie, Wi-Fi, drukarki, LED i kolory, tryb testowy, kopia ustawień oraz aktualizacje OTA.

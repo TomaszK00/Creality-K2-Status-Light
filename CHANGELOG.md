@@ -1,5 +1,11 @@
 # Firmware changelog
 
+## v2.36 — test candidate (24 October 2026)
+
+- Move blue status LED signals into three expandable FAQ questions, with compact visual blink patterns. Remove the separate LED information block.
+- Add a footer appearance control with automatic system, light and dark modes for the full interface. Save the choice in the browser and respond to system appearance changes in automatic mode.
+- Update all four translations and check FAQ search and theme logic. GitHub Actions compilation and physical device testing remain pending.
+
 ## v2.35 — test candidate (24 October 2026)
 
 - Expand FAQ to 29 searchable questions across setup, Wi-Fi, printer connections, LED settings and colours, test mode, backups and OTA issues.
