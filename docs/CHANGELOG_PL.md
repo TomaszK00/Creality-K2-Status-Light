@@ -1,5 +1,11 @@
 # Historia zmian — LayerGlow
 
+## v2.39 — wersja testowa (24 października 2026)
+
+- Zamiast trzech kropek motywu przy stopce są trzy pola z haczykiem w jednym wierszu: Auto, Jasny i Ciemny.
+- Aktywny jest zawsze dokładnie jeden motyw. Zachowano zapis wyboru w przeglądarce oraz reakcję trybu Auto na motyw telefonu.
+- Sprawdzono logikę interfejsu; test na urządzeniu pozostaje do wykonania.
+
 ## v2.38 — wersja testowa (24 października 2026)
 
 - Na telefonie górne menu chowa się, gdy tytuł „Kolory i ustawienia LED” wchodzi pod przyklejony podgląd LED. Menu wraca, gdy tytuł jest znów widoczny. Układ komputerowy pozostaje bez zmian.
