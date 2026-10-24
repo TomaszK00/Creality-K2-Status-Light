@@ -1,5 +1,11 @@
 # Firmware changelog
 
+## v2.35 — test candidate (24 October 2026)
+
+- Expand FAQ to 29 searchable questions across setup, Wi-Fi, printer connections, LED settings and colours, test mode, backups and OTA issues.
+- Translate the complete new guide into English, Polish, Spanish and German. Present answers as compact expandable rows in the existing mobile full-screen FAQ panel.
+- UI logic checks passed; GitHub Actions compilation and physical device testing remain pending.
+
 ## v2.34 — test candidate (23 October 2026)
 
 - Replace user-facing ESP32/ESP32-C3 labels with LayerGlow in the network panel, OTA instructions, FAQ and restart messages across English, Polish, Spanish and German.

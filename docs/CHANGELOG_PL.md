@@ -1,5 +1,11 @@
 # Historia zmian — LayerGlow
 
+## v2.35 — wersja testowa (24 października 2026)
+
+- Rozbudowano FAQ do 29 pytań z wyszukiwarką: pierwsze uruchomienie, Wi-Fi, drukarki, LED i kolory, tryb testowy, kopia ustawień oraz aktualizacje OTA.
+- Cała nowa pomoc jest dostępna po polsku, angielsku, hiszpańsku i niemiecku. Każdą odpowiedź można rozwinąć osobno w pełnoekranowym FAQ na telefonie.
+- Kontrola logiki strony przeszła; kompilacja GitHub Actions i test na urządzeniu pozostają do wykonania.
+
 ## v2.34 — wersja testowa (23 października 2026)
 
 - W panelu sieci, instrukcji OTA, FAQ i komunikatach restartu nazwa urządzenia to LayerGlow. Poprawiono wszystkie cztery wersje językowe.
