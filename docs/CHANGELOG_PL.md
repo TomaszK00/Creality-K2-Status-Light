@@ -4,7 +4,7 @@
 
 - Zamiast trzech kropek motywu przy stopce są trzy pola z haczykiem w jednym wierszu: Auto, Jasny i Ciemny.
 - Aktywny jest zawsze dokładnie jeden motyw. Zachowano zapis wyboru w przeglądarce oraz reakcję trybu Auto na motyw telefonu.
-- Sprawdzono logikę interfejsu; test na urządzeniu pozostaje do wykonania.
+- Sprawdzono logikę interfejsu i kompilację GitHub Actions; test na urządzeniu pozostaje do wykonania.
 
 ## v2.38 — wersja testowa (24 października 2026)
 
