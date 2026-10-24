@@ -4,7 +4,7 @@
 
 - Na telefonie przyciski dodawania i usuwania kolorów są w pierwszym rzędzie przy 1–4 kolorach, w drugim przy 5–10 i w trzecim przy 11–12. Układ mieści się także na wąskich ekranach.
 - Nazwa wybranego efektu jest obok etykiety „Efekt”, nad listą wyboru.
-- Sprawdzono logikę interfejsu; test na urządzeniu pozostaje do wykonania.
+- Sprawdzono logikę interfejsu i kompilację GitHub Actions; test na urządzeniu pozostaje do wykonania.
 
 ## v2.36 — wersja testowa (24 października 2026)
 
