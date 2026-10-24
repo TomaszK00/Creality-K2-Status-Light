@@ -13,6 +13,8 @@
 
 Test state now includes Printer reading. Selecting it turns off simulation and displays live printer status; choosing any other state starts a test on the preview and connected strip. Play progress automatically occupies the former Test mode checkbox position, and Repeat test after 100% remains beside it. The mobile progress label says Print progress when live data is selected.
 
+OTA v2.41: 1,751,072 bytes; SHA-256 `e459974d518ce041b7bc38f311357e84f8a146e34dc266423b43565865777c34`.
+
 ## v2.40 test candidate
 
 The LED preview remains one full-width row. It shows up to 48 LEDs; for physical strips of 49–300 LEDs, 48 preview lights represent the complete strip and the real LED count stays visible. Colour zones, printing progress and animation positions are sampled across the physical strip. Only the browser preview is capped; the configured number of connected LEDs remains unchanged.
