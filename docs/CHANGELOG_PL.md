@@ -4,7 +4,7 @@
 
 - Podgląd LED pozostaje jednym rzędem o stałej szerokości niezależnie od długości fizycznego paska.
 - Do 48 LED pokazuje wszystkie pola; przy 49–300 LED 48 pól reprezentuje cały pasek. Kolory, postęp i efekty są próbkowane wzdłuż rzeczywistej długości. Przy skalowaniu pojawia się krótkie objaśnienie.
-- Liczba fizycznych LED i sterowanie podłączonym paskiem pozostają bez zmian. Sprawdzono logikę podglądu dla 5, 24, 25, 48, 49 i 300 LED oraz 14 efektów; test sprzętowy pozostaje do wykonania.
+- Liczba fizycznych LED i sterowanie podłączonym paskiem pozostają bez zmian. Sprawdzono logikę podglądu dla 5, 24, 25, 48, 49 i 300 LED oraz 14 efektów. Kompilacja GitHub Actions przeszła; test sprzętowy pozostaje do wykonania.
 
 ## v2.39 — wersja testowa (24 października 2026)
 
