@@ -1,5 +1,11 @@
 # Firmware changelog
 
+## v2.38 — test candidate (24 October 2026)
+
+- On phones, hide the top menu when the Colours and LED settings heading goes beneath the sticky LED preview; show it again when the heading reappears. The desktop menu stays fixed.
+- Replace the footer theme dropdown with three selectable dots on one line: automatic, light and dark. Keep the selected mode labelled, translated and saved in the browser.
+- Interface logic checks passed; physical device testing remains pending.
+
 ## v2.37 — test candidate (24 October 2026)
 
 - On phones, place the colour add/remove controls in row one for 1–4 colours, row two for 5–10, and row three for 11–12. Keep the controls within the card on narrow screens.
