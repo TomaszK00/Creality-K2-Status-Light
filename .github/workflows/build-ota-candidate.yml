@@ -3,7 +3,7 @@ name: Build OTA candidate
 on:
   push:
     branches:
-      - candidate/v2.36
+      - candidate/v2.37
   workflow_dispatch:
 
 permissions:
@@ -40,7 +40,7 @@ jobs:
           folder.mkdir(exist_ok=True)
           (folder / 'LayerGlow_v2_36_OTA.bin').write_bytes(image)
           manifest = {
-              'version': '2.36',
+              'version': '2.37',
               'file': 'LayerGlow_v2_36_OTA.bin',
               'size': len(image),
               'sha256': sha,
@@ -55,5 +55,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add Software/LayerGlow_v2_36_OTA.bin Software/update.json
-          git commit -m "build: stage v2.36 OTA candidate"
-          git push origin HEAD:candidate/v2.36
+          git commit -m "build: stage v2.37 OTA candidate"
+          git push origin HEAD:candidate/v2.37
