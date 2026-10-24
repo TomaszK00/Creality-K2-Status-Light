@@ -13,6 +13,8 @@
 
 The footer theme selector now shows three labelled checkboxes in one row: Auto, Light and Dark. Choosing one clears the other two; one choice always stays active. Existing saved appearance preferences and the automatic system mode continue to work.
 
+OTA v2.39: 1,749,184 bytes; SHA-256 `1f71a816dae0d73ca2d584f3a9dc4a829734db711d322d63208ac7c539340bb7`.
+
 ## v2.38 test candidate
 
 On phones, the top menu now hides when the Colours and LED settings heading passes beneath the sticky LED preview, and returns when the heading appears again. The footer uses three coloured dots for automatic, light and dark appearance, with a label for the selected mode. The setting is remembered and the automatic choice follows the device appearance.
