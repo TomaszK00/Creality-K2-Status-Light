@@ -1,5 +1,11 @@
 # Firmware changelog
 
+## v2.37 — test candidate (24 October 2026)
+
+- On phones, place the colour add/remove controls in row one for 1–4 colours, row two for 5–10, and row three for 11–12. Keep the controls within the card on narrow screens.
+- Show the selected effect name next to the Effect label above its selector.
+- Interface logic checks passed; physical device testing remains pending.
+
 ## v2.36 — test candidate (24 October 2026)
 
 - Move blue status LED signals into three expandable FAQ questions, with compact visual blink patterns. Remove the separate LED information block.
