@@ -4,7 +4,7 @@
 
 - Na telefonie górne menu chowa się, gdy tytuł „Kolory i ustawienia LED” wchodzi pod przyklejony podgląd LED. Menu wraca, gdy tytuł jest znów widoczny. Układ komputerowy pozostaje bez zmian.
 - Przy stopce zamiast listy wyboru motywu są trzy kropki w jednym wierszu: automatyczny, jasny i ciemny. Wybrany tryb ma podpis, tłumaczenie i zapisuje się w przeglądarce.
-- Sprawdzono logikę interfejsu; test na urządzeniu pozostaje do wykonania.
+- Sprawdzono logikę interfejsu i kompilację GitHub Actions; test na urządzeniu pozostaje do wykonania.
 
 ## v2.37 — wersja testowa (24 października 2026)
 
