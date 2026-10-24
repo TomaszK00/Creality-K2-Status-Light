@@ -1,5 +1,11 @@
 # Firmware changelog
 
+## v2.39 — test candidate (24 October 2026)
+
+- Replace the footer's three round theme controls with labelled Auto, Light and Dark checkboxes in one row.
+- Keep only one mode selected at a time. Preserve saved browser preferences and automatic response to the device appearance.
+- Interface logic checks passed; physical device testing remains pending.
+
 ## v2.38 — test candidate (24 October 2026)
 
 - On phones, hide the top menu when the Colours and LED settings heading goes beneath the sticky LED preview; show it again when the heading reappears. The desktop menu stays fixed.
