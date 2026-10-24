@@ -4,7 +4,7 @@
 
 - Expand FAQ to 29 searchable questions across setup, Wi-Fi, printer connections, LED settings and colours, test mode, backups and OTA issues.
 - Translate the complete new guide into English, Polish, Spanish and German. Present answers as compact expandable rows in the existing mobile full-screen FAQ panel.
-- UI logic checks passed; GitHub Actions compilation and physical device testing remain pending.
+- UI logic checks and GitHub Actions compilation passed; physical device testing remains pending.
 
 ## v2.34 — test candidate (23 October 2026)
 
