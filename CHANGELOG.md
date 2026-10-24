@@ -1,5 +1,11 @@
 # Firmware changelog
 
+## v2.40 — test candidate (24 October 2026)
+
+- Keep the LED preview in one fixed-width row for every physical strip length.
+- Show up to 48 preview lights; above 48 physical LEDs, sample colours, progress and effects across the complete strip. Show a short explanation only when the preview is scaled.
+- The configured physical LED count and connected strip remain unchanged. Check preview logic at 5, 24, 25, 48, 49 and 300 LEDs and all 14 effects; hardware testing remains pending.
+
 ## v2.39 — test candidate (24 October 2026)
 
 - Replace the footer's three round theme controls with labelled Auto, Light and Dark checkboxes in one row.
