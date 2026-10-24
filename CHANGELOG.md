@@ -4,7 +4,7 @@
 
 - On phones, hide the top menu when the Colours and LED settings heading goes beneath the sticky LED preview; show it again when the heading reappears. The desktop menu stays fixed.
 - Replace the footer theme dropdown with three selectable dots on one line: automatic, light and dark. Keep the selected mode labelled, translated and saved in the browser.
-- Interface logic checks passed; physical device testing remains pending.
+- Interface logic checks and GitHub Actions compilation passed; physical device testing remains pending.
 
 ## v2.37 — test candidate (24 October 2026)
 
