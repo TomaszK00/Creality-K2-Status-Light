@@ -3,11 +3,15 @@
 **ESP32-C3-powered LED status and progress indicator for 3D printers. Creality K2 is the documented hardware integration; other printer options in recent firmware are experimental.**
 
 ![Project status](https://img.shields.io/badge/status-development-orange)
-![Current OTA](https://img.shields.io/badge/current%20OTA-v2.40-orange)
+![Current OTA](https://img.shields.io/badge/current%20OTA-v2.41-orange)
 ![Historical archive](https://img.shields.io/badge/historical%20archive-v2.16-informational)
 ![Platform](https://img.shields.io/badge/platform-ESP32--C3-green)
 
-> **OTA test candidate: v2.40.** This release is compiled by GitHub Actions and has not yet been tested on a physical ESP32-C3 or printer. v2.39 remains available in Software/ for rollback; v2.16 remains archived.
+> **OTA test candidate: v2.41.** This release is compiled by GitHub Actions and has not yet been tested on a physical ESP32-C3 or printer. v2.40 remains available in Software/ for rollback; v2.16 remains archived.
+
+## v2.41 test candidate
+
+Test state now includes Printer reading. Selecting it turns off simulation and displays live printer status; choosing any other state starts a test on the preview and connected strip. Play progress automatically occupies the former Test mode checkbox position, and Repeat test after 100% remains beside it. The mobile progress label says Print progress when live data is selected.
 
 ## v2.40 test candidate
 
@@ -61,7 +65,8 @@ Specific functions depend on the installed firmware version. See the [change his
 
 | Item | Download |
 | --- | --- |
-| **OTA test candidate v2.40** | [LayerGlow .bin](Software/LayerGlow_v2_40_OTA.bin) |
+| **OTA test candidate v2.41** | [LayerGlow .bin](Software/LayerGlow_v2_41_OTA.bin) |
+| **Previous OTA v2.40** | [LayerGlow .bin](Software/LayerGlow_v2_40_OTA.bin) |
 | **Previous OTA v2.39** | [LayerGlow .bin](Software/LayerGlow_v2_39_OTA.bin) |
 | **Previous OTA v2.38** | [LayerGlow .bin](Software/LayerGlow_v2_38_OTA.bin) |
 | **Previous OTA v2.37** | [LayerGlow .bin](Software/LayerGlow_v2_37_OTA.bin) |
@@ -76,6 +81,7 @@ Specific functions depend on the installed firmware version. See the [change his
 | **Earlier OTA v2.28** | [LayerGlow .bin](Software/LayerGlow_v2_28_OTA.bin) |
 | **Earlier OTA v2.27** | [LayerGlow .bin](Software/LayerGlow_v2_27_OTA.bin) |
 | **Older OTA v2.15** | [Download .bin](Software/K2_Status_Light_v2_15_OTA.bin) |
+| **Source v2.41** | [Arduino sketch](Arduino/LayerGlow_v2_41/LayerGlow_v2_41.ino) · [PlatformIO project](PlatformIO/) |
 | **Source v2.40** | [Arduino sketch](Arduino/LayerGlow_v2_40/LayerGlow_v2_40.ino) · [PlatformIO project](PlatformIO/) |
 | **Source v2.39** | [Arduino sketch](Arduino/LayerGlow_v2_39/LayerGlow_v2_39.ino) · [PlatformIO project](PlatformIO/) |
 | **Source v2.38** | [Arduino sketch](Arduino/LayerGlow_v2_38/LayerGlow_v2_38.ino) · [PlatformIO project](PlatformIO/) |
