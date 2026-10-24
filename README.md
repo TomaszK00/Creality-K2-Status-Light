@@ -15,6 +15,8 @@ On phones, the +/− colour controls share the first row for 1–4 colours, the 
 
 The FAQ now presents the blue status LED signals as three expandable answers alongside the other searchable help, for 31 questions in English, Polish, Spanish and German. A footer control switches the entire panel between automatic system appearance, light mode and dark mode; the browser remembers the selection. The DHCP hostname remains `LayerGlow`, and the default `layerglow.local` address and `LayerGlow-Setup` AP are unchanged.
 
+OTA v2.37: 1,747,920 bytes; SHA-256 `5ffe13de2f9e028b41119f8e6df2e1e24eb712e809b60beba2c15f898ddccfcd`.
+
 The current OTA manifest names a single LayerGlow image; older versions and recovery artifacts remain available. Historical K2 binaries remain available in the archive.
 
 The setup AP is `LayerGlow-Setup` with password `layerglowsetup`; the default local address is `http://layerglow.local/`. The update keeps saved settings in the existing device storage.
@@ -42,6 +44,7 @@ Specific functions depend on the installed firmware version. See the [change his
 | Item | Download |
 | --- | --- |
 | **OTA test candidate v2.37** | [LayerGlow .bin](Software/LayerGlow_v2_37_OTA.bin) |
+| **Previous OTA v2.36** | [LayerGlow .bin](Software/LayerGlow_v2_36_OTA.bin) |
 | **Previous OTA v2.35** | [LayerGlow .bin](Software/LayerGlow_v2_35_OTA.bin) |
 | **Previous OTA v2.34** | [LayerGlow .bin](Software/LayerGlow_v2_34_OTA.bin) |
 | **Previous OTA v2.33** | [LayerGlow .bin](Software/LayerGlow_v2_33_OTA.bin) |
