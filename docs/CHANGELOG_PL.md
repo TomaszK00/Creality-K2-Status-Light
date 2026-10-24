@@ -4,7 +4,7 @@
 
 - Dodano Odczyt z drukarki do listy Stan testowy. Ten wybór wyłącza symulację; każdy inny stan włącza test podglądu i podłączonego paska.
 - Usunięto checkbox Tryb testowy, a Automatyczne odtwarzanie postępu przeniesiono na jego miejsce. Powtarzanie po 100% pozostało obok; etykieta postępu na telefonie rozróżnia odczyt i test.
-- Poprawiono FAQ w czterech językach i sprawdzono przełączanie między odczytem, stanami testowymi oraz automatycznym postępem. Test sprzętowy pozostaje do wykonania.
+- Poprawiono FAQ w czterech językach i sprawdzono przełączanie między odczytem, stanami testowymi oraz automatycznym postępem. Kompilacja GitHub Actions przeszła; test sprzętowy pozostaje do wykonania.
 
 ## v2.40 — wersja testowa (24 października 2026)
 
