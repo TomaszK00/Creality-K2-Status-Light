@@ -2,7 +2,7 @@
 
 This document records requested enhancements to **LayerGlow**. Items below are **planned / to verify**, not advertised as already implemented. The firmware archive and OTA release manifest remain authoritative for released features.
 
-Last updated: 23 October 2026.
+Last updated: 24 October 2026.
 
 ## Multi-printer support
 
@@ -13,22 +13,29 @@ Last updated: 23 October 2026.
 
 ## Current status
 
-- **v2.34 is a build-tested candidate, not a confirmed hardware release.** Previously requested UI changes may be implemented in current code; check the live panel before closing the tasks below.
+- **v2.37 is a build-tested candidate, not a confirmed hardware release.** Previously requested UI changes may be implemented in current code; check the live panel before closing the tasks below.
 - Keep physical OTA testing and backward compatibility checks open until verified.
 
 ## Web interface and LED configuration
 
-- [ ] Replace the LED colour-count dropdown with **+ / − controls** beside colour entries, allowing addition/removal of individual colours, up to **12**.
-- [ ] Display a maximum of **6 colour entries per row** on wider screens; adapt the layout for mobile.
+- [x] Implement **+ / − controls** for up to **12** palette colours in the v2.37 test candidate; hardware testing remains outstanding.
+- [x] Implement responsive colour rows including mobile + / − placement (1–4, 5–10, 11–12) in v2.37; verify on physical mobile devices.
 - [ ] On mobile, replace the always-visible language flags with a **Languages** menu immediately to the right of **FAQ**, with a list of supported languages.
 - [ ] Improve mobile navigation so the top settings/menu header behaves consistently while scrolling, without hiding access to key controls.
 - [ ] Verify that changes to colour palettes, effect settings, and LED-count selection persist through save and reboot.
+
+## FAQ and appearance
+
+- [x] Expand FAQ with searchable setup, Wi-Fi, printer, LED and OTA guidance in four languages (v2.35–v2.36).
+- [x] Integrate onboard blue status LED patterns as expandable FAQ entries (v2.36).
+- [x] Implement automatic, light and dark appearance modes in the footer (v2.36).
+- [ ] Verify mobile layouts, theme persistence, FAQ search and translations in a physical device/browser test.
 
 ## Network and printer status
 
 - [ ] Expand **Network and printer status** to show meaningful connection diagnostics after joining home Wi-Fi: connection state, SSID, device IP address, subnet mask, gateway, DNS, signal strength, and connected printer host/IP and port, wherever available.
 - [ ] Present separate Wi-Fi, printer API and update-server connection states; show clear failure messages.
-- [x] Provide a **stable local hostname** in the current v2.34 test candidate, e.g. `http://layerglow.local/`, using mDNS where supported, even if the DHCP-assigned IP address changes.
+- [x] Provide a **stable local hostname** in the current v2.37 test candidate, e.g. `http://layerglow.local/`, using mDNS where supported, even if the DHCP-assigned IP address changes.
 - [ ] Verify hostname discovery and `layerglow.local` resolution on target routers and client devices; `.local` may not work across isolated networks.
 - [ ] Never show saved Wi-Fi passwords or secret tokens in diagnostics, logs, exports or screenshots.
 
