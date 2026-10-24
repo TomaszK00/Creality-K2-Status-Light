@@ -1,5 +1,11 @@
 # Historia zmian — LayerGlow
 
+## v2.38 — wersja testowa (24 października 2026)
+
+- Na telefonie górne menu chowa się, gdy tytuł „Kolory i ustawienia LED” wchodzi pod przyklejony podgląd LED. Menu wraca, gdy tytuł jest znów widoczny. Układ komputerowy pozostaje bez zmian.
+- Przy stopce zamiast listy wyboru motywu są trzy kropki w jednym wierszu: automatyczny, jasny i ciemny. Wybrany tryb ma podpis, tłumaczenie i zapisuje się w przeglądarce.
+- Sprawdzono logikę interfejsu; test na urządzeniu pozostaje do wykonania.
+
 ## v2.37 — wersja testowa (24 października 2026)
 
 - Na telefonie przyciski dodawania i usuwania kolorów są w pierwszym rzędzie przy 1–4 kolorach, w drugim przy 5–10 i w trzecim przy 11–12. Układ mieści się także na wąskich ekranach.
